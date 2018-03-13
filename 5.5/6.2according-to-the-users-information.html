@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="baidu-site-verification" content="MfC8ppEukL" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="hm5989AA5qOWRt4SjRmpClu004h3pj4sKMT34pNa">
+
+    <title>显示用户的信息 | 《Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》 | Laravel 实战教程
+    </title>
+
+    <meta name="author" content="Summer" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="../images/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png"/>
+
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+    <style>
+        .ui.top.menu {border-top: 4px solid #f46660;}
+    </style>
+</head>
+<body class=" books-articles-show-page">
+<!--left-->
+<div class="ui vertical  sidebar menu left" style="z-index: 99999">
+    <div class="item">
+        <b>Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</b>
+    </div>
+    <div class="item">
+        <div class="header">
+            第一章. 基础信息
+        </div>
+        <div class="menu article">
+            <a class="item" href="1.1about-the-book.html">1.1. 序言</a>
+            <a class="item " href="1.2about-author.html">1.2. 关于作者</a>
+            <a class="item " href="1.3laravel-and-php.html">1.3. Laravel 与 PHP</a>
+            <a class="item " href="1.4reading-guide.html">1.4. 如何正确阅读本书？</a>
+            <a class="item " href="1.5writing-convention.html">1.5. 写作约定</a>
+            <a class="item " href="1.6release-notes.html">1.6. 发行说明</a>
+            <a class="item " href="1.7the-book-source-code.html">1.7. 本书源码</a>
+            <a class="item " href="1.8feedback-correction.html">1.8. 反馈纠错</a>
+            <a class="item " href="1.9faq.html">1.9. 常见问题</a>
+            <a class="item " href="1.10received-praise.html">1.10. 收到的赞誉</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第二章. 开发环境布置
+        </div>
+
+        <div class="menu article">
+            <a class="item " href="2.1the-editor-to-choose.html">2.1. 编辑器选用</a>
+            <a class="item " href="2.2command-line-tool.html">2.2. 命令行工具</a>
+            <a class="item " href="2.3the-development-environment-to-build.html">2.3. 开发环境搭建</a>
+            <a class="item " href="2.4development-environment-macos.html">2.4. 开发环境搭建 - MacOS</a>
+            <a class="item " href="2.5development-environment-windows.html">2.5. 开发环境搭建 - Windows</a>
+            <a class="item " href="2.6browser-selection.html">2.6. 浏览器选择</a>
+            <a class="item " href="2.7the-first-application-hello-laravel.html">2.7. 第一个应用，Hello Laravel！</a>
+            <a class="item " href="2.8git-and-making.html">2.8. Git 与 GitHub</a>
+            <a class="item " href="2.9the-deployment-of.html">2.9. 部署上线</a>
+            <a class="item " href="2.10summary.html">2.10. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第三章. 构建页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="3.1chapter.html">3.1. 章节说明</a>
+            <a class="item " href="3.2create-an.html">3.2. 创建应用</a>
+            <a class="item " href="3.3a-static-page.html">3.3. 静态页面</a>
+            <a class="item " href="3.4artisan-command.html">3.4. Artisan 命令</a>
+            <a class="item " href="3.5summary.html">3.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第四章. 优化页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="4.1chapter.html">4.1. 章节说明</a>
+            <a class="item " href="4.2style-beautification.html">4.2. 样式美化</a>
+            <a class="item " href="4.3laravel-front-end-workflow.html">4.3. Laravel 前端工作流</a>
+            <a class="item " href="4.4local-view.html">4.4. 局部视图</a>
+            <a class="item " href="4.5the-links-in-the-layout.html">4.5. 布局中的链接</a>
+            <a class="item " href="4.6user-registration.html">4.6. 用户注册页面</a>
+            <a class="item " href="4.7summary.html">4.7. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第五章. 用户模型
+        </div>
+        <div class="menu article">
+            <a class="item " href="5.1chapter.html">5.1. 章节说明</a>
+            <a class="item " href="5.2database-migration.html">5.2. 数据库迁移</a>
+            <a class="item " href="5.3check-the-database-table.html">5.3. 查看数据库表</a>
+            <a class="item " href="5.4model-file.html">5.4. 模型文件</a>
+            <a class="item " href="5.5create-a-user-object.html">5.5. 创建用户对象</a>
+            <a class="item " href="5.6to-find-the-user-object.html">5.6. 查找用户对象</a>
+            <a class="item " href="5.7update-user-object.html">5.7. 更新用户对象</a>
+            <a class="item " href="5.8summary.html">5.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第六章. 用户注册
+        </div>
+        <div class="menu article">
+            <a class="item " href="6.1chapter.html">6.1. 章节说明</a>
+            <a class="item active" href="6.2according-to-the-users-information.html">6.2. 显示用户的信息</a>
+            <a class="item " href="6.3registration-form.html">6.3. 注册表单</a>
+            <a class="item " href="6.4the-user-data-validation.html">6.4. 用户数据验证</a>
+            <a class="item " href="6.5registration-failed-error-message.html">6.5. 注册失败错误消息</a>
+            <a class="item " href="6.6registered-successfully.html">6.6. 注册成功</a>
+            <a class="item " href="6.7using-postgresql-on-heroku.html">6.7. 在 Heroku 上使用 PostgreSQL</a>
+            <a class="item " href="6.8summary.html">6.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第七章. 会话管理
+        </div>
+        <div class="menu article">
+            <a class="item " href="7.1chapter.html">7.1. 章节说明</a>
+            <a class="item " href="7.2the-session.html">7.2. 会话</a>
+            <a class="item " href="7.3the-user-login.html">7.3. 用户登录</a>
+            <a class="item " href="7.4exit.html">7.4. 退出</a>
+            <a class="item " href="7.5remember-that-i.html">7.5. 记住我</a>
+            <a class="item " href="7.6summary.html">7.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第八章. 用户 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="8.1chapter.html">8.1. 章节说明</a>
+            <a class="item " href="8.2update-user.html">8.2. 更新用户</a>
+            <a class="item " href="8.3permissions-system.html">8.3. 权限系统</a>
+            <a class="item " href="8.4list-all-user.html">8.4. 列出所有用户</a>
+            <a class="item " href="8.5delete-user.html">8.5. 删除用户</a>
+            <a class="item " href="8.6summary.html">8.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第九章. 邮件发送
+        </div>
+        <div class="menu article">
+            <a class="item " href="9.1chapter.html">9.1. 章节说明</a>
+            <a class="item " href="9.2account-activation.html">9.2. 账户激活</a>
+            <a class="item " href="9.3password-reset.html">9.3. 密码重设</a>
+            <a class="item " href="9.4in-a-production-environment-to-send-mail.html">9.4. 在生产环境中发送邮件</a>
+            <a class="item " href="9.5summary.html">9.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十章. 微博 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="10.1chapter.html">10.1. 章节说明</a>
+            <a class="item " href="10.2weibo-model.html">10.2. 微博模型</a>
+            <a class="item " href="10.3according-to-weibo.html">10.3. 显示微博</a>
+            <a class="item " href="10.4weibo-related-operations.html">10.4. 微博相关的操作</a>
+            <a class="item " href="10.5summary.html">10.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十一章. 粉丝关系
+        </div>
+        <div class="menu article">
+            <a class="item " href="11.1chapter.html">11.1. 章节说明</a>
+            <a class="item " href="11.2fan-data-table.html">11.2. 粉丝数据表</a>
+            <a class="item " href="11.3focus-on-the-users-web-interface.html">11.3. 关注用户的网页界面</a>
+            <a class="item " href="11.4dynamic-flow.html">11.4. 动态流</a>
+            <a class="item " href="11.5summary.html">11.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十二章. 附录
+        </div>
+        <div class="menu article">
+            <a class="item " href="12.1proper-noun-index.html">12.1. 专有名词索引</a>
+            <a class="item " href="12.2command-line-index.html">12.2. 命令行索引</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十三章. 附言
+        </div>
+        <div class="menu article">
+            <a class="item " href="13.1the-next-step-study-suggest.html">13.1. 下一步的学习建议</a>
+        </div>
+    </div>
+</div>
+<!--left-->
+
+<div class="ui basic teal  launch right attached fixed button">
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+</div>
+
+<div class="pusher">
+
+    <div class="main container">
+
+        <nav class="ui main borderless menu top stackable">
+            <div class="ui container">
+                <a href="../index.html" class="header item">
+                    Laravel 实战教程 <div class="ui left pointing orange basic label" style="font-weight: normal;"> 全栈给我自由 </div>
+                </a>
+
+
+                <a href="https://laravel-china.org/topics" class="item no-pjax" >社区</a>
+                <a href="https://laravel-china.org/categories/4" class="item">问答</a>
+
+                <div class="ui fluid category search item">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+
+
+                <div class=" right menu stackable">
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/login"><i class="icon user "></i> 登录 </a>
+                    </div>
+
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/register"><i class="icon signup "></i> 注册 </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <div class="ui centered grid container stackable">
+
+            <div class="twelve wide column">
+
+
+                <div class="ui segment article-content">
+
+
+                    <div class="extra-padding">
+
+                        <h1>
+                            <i class="grey file text outline icon"></i>
+                            <span style="line-height: 34px;">6.2. 显示用户的信息 </span>
+
+
+
+
+
+                        </h1>
+
+                        <p class="book-article-meta">
+
+                            <a href="../index.html"><i class="icon book"></i> Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</a>
+
+                            <span class="divider">/</span>
+
+                            <span class="relative clicked-hide-guide">
+                <a class="chapter-title user-has-done-btn" data-act="chapter_sidebar_clicked" href="javascript:void(0);"><i class="icon map signs"></i> 第六章. 用户注册</a>
+    </span>
+
+                        </p>
+
+
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui readme markdown-body content-body">
+                            <h2>用户资源</h2>
+                            <p>我们之前已使用 Tinker 成功创建了一个用户对象。运行下面命令使用 Tinker 来查询用户的信息，确保该用户对象在数据库中确实存在：</p>
+                            <pre><code class="language-bash">$ php artisan tinker</code></pre>
+                            <p>从数据库中获取第一号用户的个人信息：</p>
+                            <pre><code class=" language-php">&gt;&gt;&gt; App\Models\User::first()
+=&gt; App\Models\User {#691
+     id: 1,
+     name: "Aufree",
+     email: "aufree@yousails.com",
+     created_at: "2016-09-11 08:53:33",
+     updated_at: "2016-09-11 08:58:01",
+   }</code></pre>
+                            <p>通过 Tinker 返回的信息可以看到，id 为 1，用户名为 Aufree 的用户信息被成功返回。接下来让我们开始着手构建用户个人页面，并在此页面上对用户信息进行显示。</p>
+                            <p>Laravel 遵从 RESTful 架构的设计原则，将数据看做一个资源，由 URI 来指定资源。对资源进行的获取、创建、修改和删除操作，分别对应 HTTP 协议提供的 GET、POST、PATCH 和 DELETE 方法。当我们要查看一个 id 为 1 的用户时，需要向 <code>/users/1</code> 地址发送一个 GET 请求，当 Laravel 的路由接收到该请求时，默认会把该请求传给控制器的 <code>show</code> 方法进行处理。</p>
+                            <p>Laravel 为我们提供了 <code>resource</code> 方法来定义用户资源路由。</p>
+                            <p><em>routes/web.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+Route::get('/', 'StaticPagesController@home')-&gt;name('home');
+Route::get('/help', 'StaticPagesController@help')-&gt;name('help');
+Route::get('/about', 'StaticPagesController@about')-&gt;name('about');
+
+Route::get('signup', 'UsersController@create')-&gt;name('signup');
+Route::resource('users', 'UsersController');</code></pre>
+                            <p>新增的 <code>resource</code> 方法将遵从 RESTful 架构为用户资源生成路由。该方法接收两个参数，第一个参数为资源名称，第二个参数为控制器名称。</p>
+                            <pre><code class="language-php">Route::resource('users', 'UsersController');</code></pre>
+                            <p>上面代码将等同于：</p>
+                            <pre><code class="language-php">Route::get('/users', 'UsersController@index')-&gt;name('users.index');
+Route::get('/users/{user}', 'UsersController@show')-&gt;name('users.show');
+Route::get('/users/create', 'UsersController@create')-&gt;name('users.create');
+Route::post('/users', 'UsersController@store')-&gt;name('users.store');
+Route::get('/users/{user}/edit', 'UsersController@edit')-&gt;name('users.edit');
+Route::patch('/users/{user}', 'UsersController@update')-&gt;name('users.update');
+Route::delete('/users/{user}', 'UsersController@destroy')-&gt;name('users.destroy');</code></pre>
+                            <p>可以看到使用 <code>resource</code> 方法让我们少写了很多代码，且严格按照了 RESTful 架构对路由进行设计。</p>
+                            <p>生成的资源路由列表信息如下所示：</p>
+                            <table><thead><tr><th>HTTP 请求</th>
+                                <th>URL</th>
+                                <th>动作</th>
+                                <th>作用</th>
+                            </tr></thead><tbody><tr><td>GET</td>
+                                <td>/users</td>
+                                <td>UsersController@index</td>
+                                <td>显示所有用户列表的页面</td>
+                            </tr><tr><td>GET</td>
+                                <td>/users/{user}</td>
+                                <td>UsersController@show</td>
+                                <td>显示用户个人信息的页面</td>
+                            </tr><tr><td>GET</td>
+                                <td>/users/create</td>
+                                <td>UsersController@create</td>
+                                <td>创建用户的页面</td>
+                            </tr><tr><td>POST</td>
+                                <td>/users</td>
+                                <td>UsersController@store</td>
+                                <td>创建用户</td>
+                            </tr><tr><td>GET</td>
+                                <td>/users/{user}/edit</td>
+                                <td>UsersController@edit</td>
+                                <td>编辑用户个人资料的页面</td>
+                            </tr><tr><td>PATCH</td>
+                                <td>/users/{user}</td>
+                                <td>UsersController@update</td>
+                                <td>更新用户</td>
+                            </tr><tr><td>DELETE</td>
+                                <td>/users/{user}</td>
+                                <td>UsersController@destroy</td>
+                                <td>删除用户</td>
+                            </tr></tbody></table>
+
+                            <p>这时我们访问 <a href="http://sample.test/users/1">http://sample.test/users/1</a> 页面，会出现如下页面。这是因为该路由请求由 <code>UsersController</code> 里面的 <code>show</code> 方法来处理，但现在该方法还不存在，因此会导致报错。</p>
+                            <p><img src="../images/ZthPGKLL4E.png" alt="file" /></p>
+                            <p><code>UsersController</code> 的 <code>show</code> 方法定义如下。</p>
+                            <p><em>app/Http/Controllers/UsersController.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Models\User;
+
+class UsersController extends Controller
+{
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function show(User $user)
+    {
+        return view('users.show', compact('user'));
+    }
+}</code></pre>
+                            <p>Laravel 会自动解析定义在控制器方法（变量名匹配路由片段）中的 Eloquent 模型类型声明。在上面代码中，由于 <code>show()</code> 方法传参时声明了类型 —— Eloquent 模型 <code>User</code>，对应的变量名 <code>$user</code> 会匹配路由片段中的 <code>{user}</code>，这样，Laravel 会自动注入与请求 URI 中传入的 ID 对应的用户模型实例。</p>
+                            <p>此功能称为 <a href="http://d.laravel-china.org/docs/5.5/routing#%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A">『隐性路由模型绑定』</a>，是『约定优于配置』设计范式的体现，同时满足以下两种情况，此功能即会自动启用：</p>
+                            <ol><li>路由声明时必须使用 Eloquent 模型的单数小写格式来作为路由片段参数，User 对应 <code>{user}</code>：</li>
+                            </ol>
+
+                            <pre><code class=" language-php">Route::get('/users/{user}', 'UsersController@show')-&gt;name('users.show');</code></pre>
+                            <p>在使用资源路由 <code>Route::resource('users', 'UsersController');</code> 时，默认已经包含了上面的声明。</p>
+                            <ol start="2"><li>控制器方法传参中必须包含对应的 Eloquent 模型类型声明，并且是有序的：</li>
+                            </ol>
+
+                            <pre><code class=" language-php">public function show(User $user)
+{
+    return view('users.show', compact('user'));
+}</code></pre>
+                            <p>当请求 <a href="http://sample.test/users/1">http://sample.test/users/1</a>  并且满足以上两个条件时，Laravel 将会自动查找 ID 为 1 的用户并赋值到变量 <code>$user</code> 中，如果数据库中找不到对应的模型实例，会自动生成 HTTP 404 响应。</p>
+                            <pre><code class="language-php">return view('users.show', compact('user'));</code></pre>
+                            <p>我们将用户对象 <code>$user</code> 通过 <a href="http://php.net/manual/zh/function.compact.php"><code>compact</code></a> 方法转化为一个关联数组，并作为第二个参数传递给 <code>view</code> 方法，将数据与视图进行绑定。</p>
+                            <p><code>show</code> 方法添加完成之后，我们便能在视图中使用 <code>user</code> 变量来访问通过 <code>view</code> 方法传递给视图的用户数据。</p>
+                            <p>由于我们还没有创建用户个人页面，因此这时访问用户页面时会出现如下报错。</p>
+                            <pre><code class=" language-php">View [users.show] not found.</code></pre>
+                            <p><img src="../images/OubJI32mfn.png" alt="file" /></p>
+                            <p>下面让我们来新建一个用户个人页面。</p>
+                            <p><em>resources/views/users/show.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', $user-&gt;name)
+@section('content')
+{{ $user-&gt;name }} - {{ $user-&gt;email }}
+@stop</code></pre>
+                            <p>由于我们使用了 <code>view('users.show', compact('user'))</code> 将用户数据与视图进行绑定，因此在视图中可以直接使用 <code>$user</code> 来访问用户实例。</p>
+                            <p>这时候我们再访问用户个人页面，便能够看到基本的数据展示。</p>
+                            <p><img src="../images/PXhSgafxtO.png" alt="file" /></p>
+                            <h2>Gravatar 头像和侧边栏</h2>
+                            <p>现在，我们要为用户的个人页面添加头像显示的功能。接下来的项目开发将使用 <a href="https://en.gravatar.com/">Gravatar</a> 来为用户提供个人头像支持。Gravatar 为 “全球通用头像”，当你在 Gravatar 的服务器上放置了自己的头像后，可通过将自己的 Gravatar 登录邮箱进行 MD5 转码，并与 Gravatar 的 URL 进行拼接来获取到自己的 Gravatar 头像。</p>
+                            <p>接下来让我们在用户模型中定义一个 <code>gravatar</code> 方法，用来生成用户的头像。</p>
+                            <p><em>app/Models/User.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Models;
+.
+.
+.
+class User extends Authenticatable
+{
+    .
+    .
+    .
+    public function gravatar($size = '100')
+    {
+        $hash = md5(strtolower(trim($this-&gt;attributes['email'])));
+        return "http://www.gravatar.com/avatar/$hash?s=$size";
+    }
+}    </code></pre>
+                            <p>该方法主要做了以下几个操作：</p>
+                            <ol><li>为 gravatar 方法传递的参数 <code>size</code> 指定了默认值 100；</li>
+                                <li>通过 <code>$this-&gt;attributes['email']</code> 获取到用户的邮箱；</li>
+                                <li>使用 <code>trim</code> 方法剔除邮箱的前后空白内容；</li>
+                                <li>用 <code>strtolower</code> 方法将邮箱转换为小写；</li>
+                                <li>将小写的邮箱使用 md5 方法进行转码；</li>
+                                <li>将转码后的邮箱与链接、尺寸拼接成完整的 URL 并返回；</li>
+                            </ol>
+
+                            <p>定义好 <code>gravatar</code> 方法之后，我们便可以在视图中通过以下方式进行调用：</p>
+                            <p>使用默认尺寸来获取头像：</p>
+                            <pre><code class="language-php">$user-&gt;gravatar();</code></pre>
+                            <p>为 <code>gravatar</code> 指定尺寸大小来获取头像：</p>
+                            <pre><code class="language-php">$user-&gt;gravatar('140');</code></pre>
+                            <p>接下来让我们来构建一个全局通用的局部视图，用于展示用户的头像和用户名等基本信息。</p>
+                            <p><em>resources/views/shared/_user_info.blade.php</em></p>
+                            <pre><code class="language-html">&lt;a href="{{ route('users.show', $user-&gt;id) }}"&gt;
+  &lt;img src="{{ $user-&gt;gravatar('140') }}" alt="{{ $user-&gt;name }}" class="gravatar"/&gt;
+&lt;/a&gt;
+&lt;h1&gt;{{ $user-&gt;name }}&lt;/h1&gt;</code></pre>
+                            <p>该视图将被嵌套在用户个人页面中进行使用，因此我们需要对用户个人页面进行更改，加入我们新创建的用户信息局部视图。</p>
+                            <p><em>resources/views/users/show.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', $user-&gt;name)
+@section('content')
+&lt;div class="row"&gt;
+  &lt;div class="col-md-offset-2 col-md-8"&gt;
+    &lt;div class="col-md-12"&gt;
+      &lt;div class="col-md-offset-2 col-md-8"&gt;
+        &lt;section class="user_info"&gt;
+          @include('shared._user_info', ['user' =&gt; $user])
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+@stop</code></pre>
+                            <p>我们可以通过给 <code>@include</code> 方法传参，将用户数据以关联数组的形式传送到 <code>_user_info</code> 局部视图上。</p>
+                            <pre><code class="language-php">@include('shared._user_info', ['user' =&gt; $user])</code></pre>
+                            <p>接下来对样式再进行优化。</p>
+                            <p><em>resources/assets/sass/app.scss</em></p>
+                            <pre><code class="language-scss">.
+.
+.
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &amp;:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+  }
+}
+
+section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}</code></pre>
+                            <p>现在再次访问个人页面，便可以看到用户头像了。</p>
+                            <p><img src="../images/rpvAmmTKN1.png" alt="file" /></p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <a class="ui basic button small  pull-left popover " data-content="6.1. 章节说明" href="6.1chapter.html"><i class="icon arrow left"></i> 上一篇</a>
+                    <a class="ui basic button small  pull-right popover " data-content="6.3. 注册表单" href="6.3registration-form.html">下一篇 <i class="icon arrow right"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="item header">
+
+                    <div class="ui segment orange text-center" style="padding: 25px;">
+                        刻意练习，每日精进。
+                    </div>
+
+
+                    <div class="ui segment">
+
+                        <div class="ui three statistics">
+                            <div class="ui huge statistic">
+                                <div class="value">22</div>
+                                <div class="label">点赞</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">9179</div>
+                                <div class="label">浏览</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">1</div>
+                                <div class="label">评论</div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="ui stackable cards">
+                    <div class="ui  card column author-box grid" style="margin-top: 20px;">
+
+                        <div class="ui fluid" style="margin-top: 20px;">
+                            <div class="ui teal ribbon label"><i class="star icon"></i> 作者</div>
+                        </div>
+
+                        <a class="avatar-link">
+                            <img class="ui centered circular tiny image "
+                                 src="../images/1_1479342408.png">
+                            </img>
+                        </a>
+
+                        <div class="extra content ui center aligned container">
+                            <a class="header">Summer</a>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui sticky" style="padding-top:20px">
+                    <div class="ui  card column author-box grid " id="toc">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="circular ui icon button fixed feedback popover" data-content="建议与反馈 @Summer" data-position="left center">
+        <i class="icon talk outline"></i>
+    </a>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">友站</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a>
+                        <a href="https://easywechat.org/" class="item" target="_blank">EasyWechat</a>
+                        <a href="https://yousails.com/" class="item" target="_blank">优帆远扬</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">资源推荐</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://d.laravel-china.org/" class="item" target="_blank">Laravel 中文文档</a>
+                        <a href="https://cs.laravel-china.org/" class="item" target="_blank">Laravel 速查表</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted  header">Laravel 实战教程</h4>
+                    <p>
+                        编程是技能，不是知识，技能的唯一学习路径就是重复、实战性练习。
+                    </p>
+
+                    <p>
+                        <a class="ui teal button" href="https://laravel-china.org/contact"><i class="icon idea "></i>
+                            联系我
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ui inverted section divider"></div>
+            <div>
+
+                <p style="font-size:0.9em; margin-top:20px;margin-bottom: -8px;color: rgb(137, 137, 140);"
+                   class="ui inverted ">
+                    由 <a href="http://weibo.com/u/1837553744?is_hot=1" target="_blank"
+                         style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="baidu-site-verification" content="MfC8ppEukL" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="hm5989AA5qOWRt4SjRmpClu004h3pj4sKMT34pNa">
+
+    <title>显示微博 | 《Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》 | Laravel 实战教程
+    </title>
+
+    <meta name="author" content="Summer" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="../images/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png"/>
+
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+    <style>
+        .ui.top.menu {border-top: 4px solid #f46660;}
+    </style>
+</head>
+<body class=" books-articles-show-page">
+<!--left-->
+<div class="ui vertical  sidebar menu left" style="z-index: 99999">
+    <div class="item">
+        <b>Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</b>
+    </div>
+    <div class="item">
+        <div class="header">
+            第一章. 基础信息
+        </div>
+        <div class="menu article">
+            <a class="item" href="1.1about-the-book.html">1.1. 序言</a>
+            <a class="item " href="1.2about-author.html">1.2. 关于作者</a>
+            <a class="item " href="1.3laravel-and-php.html">1.3. Laravel 与 PHP</a>
+            <a class="item " href="1.4reading-guide.html">1.4. 如何正确阅读本书？</a>
+            <a class="item " href="1.5writing-convention.html">1.5. 写作约定</a>
+            <a class="item " href="1.6release-notes.html">1.6. 发行说明</a>
+            <a class="item " href="1.7the-book-source-code.html">1.7. 本书源码</a>
+            <a class="item " href="1.8feedback-correction.html">1.8. 反馈纠错</a>
+            <a class="item " href="1.9faq.html">1.9. 常见问题</a>
+            <a class="item " href="1.10received-praise.html">1.10. 收到的赞誉</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第二章. 开发环境布置
+        </div>
+
+        <div class="menu article">
+            <a class="item " href="2.1the-editor-to-choose.html">2.1. 编辑器选用</a>
+            <a class="item " href="2.2command-line-tool.html">2.2. 命令行工具</a>
+            <a class="item " href="2.3the-development-environment-to-build.html">2.3. 开发环境搭建</a>
+            <a class="item " href="2.4development-environment-macos.html">2.4. 开发环境搭建 - MacOS</a>
+            <a class="item " href="2.5development-environment-windows.html">2.5. 开发环境搭建 - Windows</a>
+            <a class="item " href="2.6browser-selection.html">2.6. 浏览器选择</a>
+            <a class="item " href="2.7the-first-application-hello-laravel.html">2.7. 第一个应用，Hello Laravel！</a>
+            <a class="item " href="2.8git-and-making.html">2.8. Git 与 GitHub</a>
+            <a class="item " href="2.9the-deployment-of.html">2.9. 部署上线</a>
+            <a class="item " href="2.10summary.html">2.10. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第三章. 构建页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="3.1chapter.html">3.1. 章节说明</a>
+            <a class="item " href="3.2create-an.html">3.2. 创建应用</a>
+            <a class="item " href="3.3a-static-page.html">3.3. 静态页面</a>
+            <a class="item " href="3.4artisan-command.html">3.4. Artisan 命令</a>
+            <a class="item " href="3.5summary.html">3.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第四章. 优化页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="4.1chapter.html">4.1. 章节说明</a>
+            <a class="item " href="4.2style-beautification.html">4.2. 样式美化</a>
+            <a class="item " href="4.3laravel-front-end-workflow.html">4.3. Laravel 前端工作流</a>
+            <a class="item " href="4.4local-view.html">4.4. 局部视图</a>
+            <a class="item " href="4.5the-links-in-the-layout.html">4.5. 布局中的链接</a>
+            <a class="item " href="4.6user-registration.html">4.6. 用户注册页面</a>
+            <a class="item " href="4.7summary.html">4.7. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第五章. 用户模型
+        </div>
+        <div class="menu article">
+            <a class="item " href="5.1chapter.html">5.1. 章节说明</a>
+            <a class="item " href="5.2database-migration.html">5.2. 数据库迁移</a>
+            <a class="item " href="5.3check-the-database-table.html">5.3. 查看数据库表</a>
+            <a class="item " href="5.4model-file.html">5.4. 模型文件</a>
+            <a class="item " href="5.5create-a-user-object.html">5.5. 创建用户对象</a>
+            <a class="item " href="5.6to-find-the-user-object.html">5.6. 查找用户对象</a>
+            <a class="item " href="5.7update-user-object.html">5.7. 更新用户对象</a>
+            <a class="item " href="5.8summary.html">5.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第六章. 用户注册
+        </div>
+        <div class="menu article">
+            <a class="item " href="6.1chapter.html">6.1. 章节说明</a>
+            <a class="item " href="6.2according-to-the-users-information.html">6.2. 显示用户的信息</a>
+            <a class="item " href="6.3registration-form.html">6.3. 注册表单</a>
+            <a class="item " href="6.4the-user-data-validation.html">6.4. 用户数据验证</a>
+            <a class="item " href="6.5registration-failed-error-message.html">6.5. 注册失败错误消息</a>
+            <a class="item " href="6.6registered-successfully.html">6.6. 注册成功</a>
+            <a class="item " href="6.7using-postgresql-on-heroku.html">6.7. 在 Heroku 上使用 PostgreSQL</a>
+            <a class="item " href="6.8summary.html">6.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第七章. 会话管理
+        </div>
+        <div class="menu article">
+            <a class="item " href="7.1chapter.html">7.1. 章节说明</a>
+            <a class="item " href="7.2the-session.html">7.2. 会话</a>
+            <a class="item " href="7.3the-user-login.html">7.3. 用户登录</a>
+            <a class="item " href="7.4exit.html">7.4. 退出</a>
+            <a class="item " href="7.5remember-that-i.html">7.5. 记住我</a>
+            <a class="item " href="7.6summary.html">7.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第八章. 用户 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="8.1chapter.html">8.1. 章节说明</a>
+            <a class="item " href="8.2update-user.html">8.2. 更新用户</a>
+            <a class="item " href="8.3permissions-system.html">8.3. 权限系统</a>
+            <a class="item " href="8.4list-all-user.html">8.4. 列出所有用户</a>
+            <a class="item " href="8.5delete-user.html">8.5. 删除用户</a>
+            <a class="item " href="8.6summary.html">8.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第九章. 邮件发送
+        </div>
+        <div class="menu article">
+            <a class="item " href="9.1chapter.html">9.1. 章节说明</a>
+            <a class="item " href="9.2account-activation.html">9.2. 账户激活</a>
+            <a class="item " href="9.3password-reset.html">9.3. 密码重设</a>
+            <a class="item " href="9.4in-a-production-environment-to-send-mail.html">9.4. 在生产环境中发送邮件</a>
+            <a class="item " href="9.5summary.html">9.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十章. 微博 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="10.1chapter.html">10.1. 章节说明</a>
+            <a class="item " href="10.2weibo-model.html">10.2. 微博模型</a>
+            <a class="item active" href="10.3according-to-weibo.html">10.3. 显示微博</a>
+            <a class="item " href="10.4weibo-related-operations.html">10.4. 微博相关的操作</a>
+            <a class="item " href="10.5summary.html">10.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十一章. 粉丝关系
+        </div>
+        <div class="menu article">
+            <a class="item " href="11.1chapter.html">11.1. 章节说明</a>
+            <a class="item " href="11.2fan-data-table.html">11.2. 粉丝数据表</a>
+            <a class="item " href="11.3focus-on-the-users-web-interface.html">11.3. 关注用户的网页界面</a>
+            <a class="item " href="11.4dynamic-flow.html">11.4. 动态流</a>
+            <a class="item " href="11.5summary.html">11.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十二章. 附录
+        </div>
+        <div class="menu article">
+            <a class="item " href="12.1proper-noun-index.html">12.1. 专有名词索引</a>
+            <a class="item " href="12.2command-line-index.html">12.2. 命令行索引</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十三章. 附言
+        </div>
+        <div class="menu article">
+            <a class="item " href="13.1the-next-step-study-suggest.html">13.1. 下一步的学习建议</a>
+        </div>
+    </div>
+</div>
+<!--left-->
+
+<div class="ui basic teal  launch right attached fixed button">
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+</div>
+
+<div class="pusher">
+
+    <div class="main container">
+
+        <nav class="ui main borderless menu top stackable">
+            <div class="ui container">
+                <a href="../index.html" class="header item">
+                    Laravel 实战教程 <div class="ui left pointing orange basic label" style="font-weight: normal;"> 全栈给我自由 </div>
+                </a>
+
+
+                <a href="https://laravel-china.org/topics" class="item no-pjax" >社区</a>
+                <a href="https://laravel-china.org/categories/4" class="item">问答</a>
+
+                <div class="ui fluid category search item">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+
+
+                <div class=" right menu stackable">
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/login"><i class="icon user "></i> 登录 </a>
+                    </div>
+
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/register"><i class="icon signup "></i> 注册 </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <div class="ui centered grid container stackable">
+
+            <div class="twelve wide column">
+
+
+                <div class="ui segment article-content">
+
+
+                    <div class="extra-padding">
+
+                        <h1>
+                            <i class="grey file text outline icon"></i>
+                            <span style="line-height: 34px;">10.3. 显示微博 </span>
+
+
+
+
+
+                        </h1>
+
+                        <p class="book-article-meta">
+
+                            <a href="../index.html"><i class="icon book"></i> Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</a>
+
+                            <span class="divider">/</span>
+
+                            <span class="relative clicked-hide-guide">
+                <a class="chapter-title user-has-done-btn" data-act="chapter_sidebar_clicked" href="javascript:void(0);"><i class="icon map signs"></i> 第十章. 微博 CRUD</a>
+    </span>
+
+                        </p>
+
+
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui readme markdown-body content-body">
+                            <h2>显示微博</h2>
+                            <p>本节我们将为用户个人页面添加微博展示列表，用于显示该用户发布过的所有微博动态。</p>
+                            <h2>获取微博</h2>
+                            <p>首先我们需要在用户控制器的 <code>show</code> 动作中取出该用户发布过的所有微博。由于我们之前进行了模型关联，因此取出一个用户的所有微博可以通过以下方式：</p>
+                            <pre><code class="language-php">$statuses = $user-&gt;statuses();</code></pre>
+                            <p>在我们将用户的所有微博取出之后，还需要根据微博的创建时间 <code>created_at</code> 对微博进行排序，让新创建的微博靠前显示。我们使用 Eloquent 模型提供的 <code>orderBy</code> 方法，通过指定字段名和排序方式来对微博进行排序。</p>
+                            <pre><code class="language-php">$statuses = $user-&gt;statuses()-&gt;orderBy('created_at', 'desc');</code></pre>
+                            <p><code>desc</code> 是英文 <code>descending</code> 的简写，意为倒序，也就是数字大的排靠前。</p>
+                            <p>最后，由于用户的微博发布数量可能会非常多，因此我们对取出的微博数据进行分页，在每个页面最多只显示 30 条微博：</p>
+                            <pre><code class="language-php">$statuses = $user-&gt;statuses()-&gt;orderBy('created_at', 'desc')-&gt;paginate(30);</code></pre>
+                            <p>现在，相信你已经知道如何为用户控制器的 <code>show</code> 动作添加微博动态的读取逻辑了。不过我们还是需要来看下具体实现代码。</p>
+                            <p><em>app/Http/Controllers/UsersController.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+.
+.
+.
+class UsersController extends Controller
+{
+    .
+    .
+    .
+    public function show(User $user)
+    {
+        $statuses = $user-&gt;statuses()
+                           -&gt;orderBy('created_at', 'desc')
+                           -&gt;paginate(30);
+        return view('users.show', compact('user', 'statuses'));
+    }
+    .
+    .
+    .
+}</code></pre>
+                            <p><code>compact</code> 方法可以同时接收多个参数，在上面代码我们将用户数据 <code>$user</code> 和微博动态数据 <code>$statuses</code> 同时传递给用户个人页面的视图上。</p>
+                            <h2>渲染微博</h2>
+                            <p>接下来我们来构建单条微博的局部视图，该局部视图最终将应用在用户的个人页面上。</p>
+                            <p>微博的局部视图包含一条微博动态的发布者，发布内容以及发布日期等信息。其基本页面结构如下：</p>
+                            <p><em>resources/views/statuses/_status.blade.php</em></p>
+                            <pre><code class="language-html">&lt;li id="status-{{ $status-&gt;id }}"&gt;
+  &lt;a href="{{ route('users.show', $user-&gt;id )}}"&gt;
+    &lt;img src="{{ $user-&gt;gravatar() }}" alt="{{ $user-&gt;name }}" class="gravatar"/&gt;
+  &lt;/a&gt;
+  &lt;span class="user"&gt;
+    &lt;a href="{{ route('users.show', $user-&gt;id )}}"&gt;{{ $user-&gt;name }}&lt;/a&gt;
+  &lt;/span&gt;
+  &lt;span class="timestamp"&gt;
+    {{ $status-&gt;created_at-&gt;diffForHumans() }}
+  &lt;/span&gt;
+  &lt;span class="content"&gt;{{ $status-&gt;content }}&lt;/span&gt;
+&lt;/li&gt;</code></pre>
+                            <p><code>$status</code> 实例代表的是单条微博的数据，<code>$user</code> 实例代表的是该微博发布者的数据。另外你可能还会注意到下面这个方法：</p>
+                            <pre><code class="language-php">$status-&gt;created_at-&gt;diffForHumans()</code></pre>
+                            <p>该方法的作用是将日期进行友好化处理，我们可以使用 tinker 来查看该方法的具体输出情况。</p>
+                            <pre><code class="language-bash">$ php artisan tinker</code></pre>
+                            <p>在 tinker 中输出第一位用户的创建时间如下。</p>
+                            <pre><code class=" language-php">&gt;&gt;&gt; $created_at = App\Models\User::first()-&gt;created_at
+=&gt; Carbon\Carbon {#704
+     +"date": "1998-12-06 03:15:31.000000",
+     +"timezone_type": 3,
+     +"timezone": "UTC",
+   }</code></pre>
+                            <p>在 tinker 中调用 <code>diffForHumans</code> 方法来输出，结果如下。</p>
+                            <pre><code class=" language-php">&gt;&gt;&gt; $created_at-&gt;diffForHumans()
+=&gt; "17 years ago"</code></pre>
+                            <p>我们发现 <code>diffForHumans</code> 为我们生成的时间是英文的，如果要使用中文时间，则需要对 Carbon 进行本地化设置。<a href="https://github.com/briannesbitt/Carbon">Carbon</a> 是 PHP DateTime 的一个简单扩展，Laravel 将其默认集成到了框架中。对 Carbon 进行本地化的设置很简单，只在 <code>AppServiceProvider</code> 中调用 Carbon 的 <code>setLocale</code> 方法即可，<code>AppServiceProvider</code> 是框架的核心，在 Laravel 启动时，会最先加载该文件。</p>
+                            <p><em>app/Providers/AppServiceProvider.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Carbon\Carbon;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Carbon::setLocale('zh');
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+                            <p>现在，让我们重启 tinker：</p>
+                            <pre><code class="language-bash">$ php artisan tinker</code></pre>
+                            <p>可以看到输出的日期将变成中文。</p>
+                            <pre><code class=" language-php">&gt;&gt;&gt; $created_at = App\Models\User::first()-&gt;created_at
+&gt;&gt;&gt; $created_at-&gt;diffForHumans()
+=&gt; "17年前"</code></pre>
+                            <p>现在，我们可以在用户的个人页面使用该局部视图和渲染微博的分页链接了。</p>
+                            <p><em>resources/views/users/show.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', $user-&gt;name)
+@section('content')
+&lt;div class="row"&gt;
+  &lt;div class="col-md-offset-2 col-md-8"&gt;
+    &lt;div class="col-md-12"&gt;
+      &lt;div class="col-md-offset-2 col-md-8"&gt;
+        &lt;section class="user_info"&gt;
+          @include('shared._user_info', ['user' =&gt; $user])
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-12"&gt;
+      @if (count($statuses) &gt; 0)
+        &lt;ol class="statuses"&gt;
+          @foreach ($statuses as $status)
+            @include('statuses._status')
+          @endforeach
+        &lt;/ol&gt;
+        {!! $statuses-&gt;render() !!}
+      @endif
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+@stop</code></pre>
+                            <p>在个人页面视图中，我们使用了 <code>count($statuses)</code> 方法来判断当前页面是否存在微博动态，如果不存在则不对微博的局部视图和分页链接进行渲染。现在视图已经构建完成，让我们针对用户微博的显示进行样式优化。</p>
+                            <p><em>resources/assets/sass/app.scss</em></p>
+                            <pre><code class="language-scss">.
+.
+.
+/* statuses */
+
+.statuses {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+    position: relative;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    word-break: break-word;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  form {
+    button.status-delete-btn {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.status_form {
+  margin-top: 20px;
+}</code></pre>
+                            <h2>示例微博</h2>
+                            <p>现在我们的用户还没有办法发布任何微博，因为我们的微博发布表单还未构建，但通过前面章节的学习，我们知道可以使用 Laravel 提供的数据填充功能来为应用生成测试数据。</p>
+                            <p>首先我们需要为「微博模型」定义好用来生成的假数据的「模型工厂」。我们可以利用 Laravel 命令 <code>make:factory</code> 来生成工厂类文件：</p>
+                            <pre><code class="language-bash">$ php artisan make:factory StatusFactory</code></pre>
+                            <p>内容填入：</p>
+                            <p><em>database/factories/StatusFactory.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Faker\Generator as Faker;
+
+$factory-&gt;define(App\Models\Status::class, function (Faker $faker) {
+    $date_time = $faker-&gt;date . ' ' . $faker-&gt;time;
+    return [
+        'content'    =&gt; $faker-&gt;text(),
+        'created_at' =&gt; $date_time,
+        'updated_at' =&gt; $date_time,
+    ];
+});</code></pre>
+                            <p>接着创建一个 StatusesTableSeeder 文件来对微博假数据进行批量生成。</p>
+                            <pre><code class="language-bash">$ php artisan make:seeder StatusesTableSeeder</code></pre>
+                            <p>我们不需要为每个用户都生成大量微博，为了测试方便且提高假数据的生成速度，我们只为前三个用户生成共 100 条微博假数据。</p>
+                            <p><em>database/seeds/StatusesTableSeeder.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Status;
+
+class StatusesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $user_ids = ['1','2','3'];
+        $faker = app(Faker\Generator::class);
+
+        $statuses = factory(Status::class)-&gt;times(100)-&gt;make()-&gt;each(function ($status) use ($faker, $user_ids) {
+            $status-&gt;user_id = $faker-&gt;randomElement($user_ids);
+        });
+
+        Status::insert($statuses-&gt;toArray());
+    }
+}</code></pre>
+                            <p>我们通过 <code>app()</code> 方法来获取一个 Faker <a href="http://d.laravel-china.org/docs/5.5/container">容器</a> 的实例，并借助 <code>randomElement</code> 方法来取出用户 id 数组中的任意一个元素并赋值给微博的 <code>user_id</code>，使得每个用户都拥有不同数量的微博。</p>
+                            <p>接下来我们需要在 <code>DatabaseSeeder</code> 类中指定调用微博数据填充文件。</p>
+                            <p><em>database/seeds/DatabaseSeeder.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Model::unguard();
+
+        $this-&gt;call(UsersTableSeeder::class);
+        $this-&gt;call(StatusesTableSeeder::class);
+
+        Model::reguard();
+    }
+}</code></pre>
+                            <p>最后让我们对数据库进行重置和填充。</p>
+                            <pre><code class="language-bash">$ php artisan migrate:refresh --seed</code></pre>
+                            <p>现在任意访问前三个用户的个人页面，可以看到微博数据已成功生成。</p><p>
+                            <img class="rm-style" src="../images/pbISVsRThT.png" alt="pbISVsRThT.png" /></p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <a class="ui basic button small  pull-left popover " data-content="10.2. 微博模型" href="10.2weibo-model.html"><i class="icon arrow left"></i> 上一篇</a>
+                    <a class="ui basic button small  pull-right popover " data-content="10.4. 微博相关的操作" href="10.4weibo-related-operations.html">下一篇 <i class="icon arrow right"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="item header">
+
+                    <div class="ui segment orange text-center" style="padding: 25px;">
+                        刻意练习，每日精进。
+                    </div>
+
+
+                    <div class="ui segment">
+
+                        <div class="ui three statistics">
+                            <div class="ui huge statistic">
+                                <div class="value">22</div>
+                                <div class="label">点赞</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">9179</div>
+                                <div class="label">浏览</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">1</div>
+                                <div class="label">评论</div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="ui stackable cards">
+                    <div class="ui  card column author-box grid" style="margin-top: 20px;">
+
+                        <div class="ui fluid" style="margin-top: 20px;">
+                            <div class="ui teal ribbon label"><i class="star icon"></i> 作者</div>
+                        </div>
+
+                        <a class="avatar-link">
+                            <img class="ui centered circular tiny image "
+                                 src="../images/1_1479342408.png">
+                            </img>
+                        </a>
+
+                        <div class="extra content ui center aligned container">
+                            <a class="header">Summer</a>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui sticky" style="padding-top:20px">
+                    <div class="ui  card column author-box grid " id="toc">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="circular ui icon button fixed feedback popover" data-content="建议与反馈 @Summer" data-position="left center">
+        <i class="icon talk outline"></i>
+    </a>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">友站</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a>
+                        <a href="https://easywechat.org/" class="item" target="_blank">EasyWechat</a>
+                        <a href="https://yousails.com/" class="item" target="_blank">优帆远扬</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">资源推荐</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://d.laravel-china.org/" class="item" target="_blank">Laravel 中文文档</a>
+                        <a href="https://cs.laravel-china.org/" class="item" target="_blank">Laravel 速查表</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted  header">Laravel 实战教程</h4>
+                    <p>
+                        编程是技能，不是知识，技能的唯一学习路径就是重复、实战性练习。
+                    </p>
+
+                    <p>
+                        <a class="ui teal button" href="https://laravel-china.org/contact"><i class="icon idea "></i>
+                            联系我
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ui inverted section divider"></div>
+            <div>
+
+                <p style="font-size:0.9em; margin-top:20px;margin-bottom: -8px;color: rgb(137, 137, 140);"
+                   class="ui inverted ">
+                    由 <a href="http://weibo.com/u/1837553744?is_hot=1" target="_blank"
+                         style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+
+</body>
+</html>

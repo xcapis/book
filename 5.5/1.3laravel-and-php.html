@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <meta name="baidu-site-verification" content="MfC8ppEukL"/>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="m55PPXyHnYShMoZrIKZEHilabsCOjlJbePu76Udq">
+
+    <title>Laravel 与 PHP | 《Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》 | Laravel 实战教程</title>
+
+    <meta name="author" content="Summer"/>
+    <meta name="description" content="为什么是 PHP？ PHP 全称是 PHP: Hypertext Preprocessor，译为：『超文本预处理器』。是一门开源脚本语言，专为『动态 Web 开发』而生。 PHP 在服务器脚本语言市场占有率中遥遥领先于其他对手： 上图是由 W3Techs..." />
+    <meta name="keywords" content="laravel教程,laravel书籍,laravel入门,laravel示例,laravel课程,laravel培训,php教程,php书籍"/>
+
+    <link rel="shortcut icon" href="../images/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png"/>
+
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+    <style>
+        .ui.top.menu {border-top: 4px solid #f46660;}
+    </style>
+
+</head>
+<body class=" books-articles-show-page">
+
+<!--left-->
+<div class="ui vertical  sidebar menu left" style="z-index: 99999">
+    <div class="item">
+        <b>Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</b>
+    </div>
+    <div class="item">
+        <div class="header">
+            第一章. 基础信息
+        </div>
+        <div class="menu article">
+            <a class="item" href="1.1about-the-book.html">1.1. 序言</a>
+            <a class="item " href="1.2about-author.html">1.2. 关于作者</a>
+            <a class="item active" href="1.3laravel-and-php.html">1.3. Laravel 与 PHP</a>
+            <a class="item " href="1.4reading-guide.html">1.4. 如何正确阅读本书？</a>
+            <a class="item " href="1.5writing-convention.html">1.5. 写作约定</a>
+            <a class="item " href="1.6release-notes.html">1.6. 发行说明</a>
+            <a class="item " href="1.7the-book-source-code.html">1.7. 本书源码</a>
+            <a class="item " href="1.8feedback-correction.html">1.8. 反馈纠错</a>
+            <a class="item " href="1.9faq.html">1.9. 常见问题</a>
+            <a class="item " href="1.10received-praise.html">1.10. 收到的赞誉</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第二章. 开发环境布置
+        </div>
+
+        <div class="menu article">
+            <a class="item " href="2.1the-editor-to-choose.html">2.1. 编辑器选用</a>
+            <a class="item " href="2.2command-line-tool.html">2.2. 命令行工具</a>
+            <a class="item " href="2.3the-development-environment-to-build.html">2.3. 开发环境搭建</a>
+            <a class="item " href="2.4development-environment-macos.html">2.4. 开发环境搭建 - MacOS</a>
+            <a class="item " href="2.5development-environment-windows.html">2.5. 开发环境搭建 - Windows</a>
+            <a class="item " href="2.6browser-selection.html">2.6. 浏览器选择</a>
+            <a class="item " href="2.7the-first-application-hello-laravel.html">2.7. 第一个应用，Hello Laravel！</a>
+            <a class="item " href="2.8git-and-making.html">2.8. Git 与 GitHub</a>
+            <a class="item " href="2.9the-deployment-of.html">2.9. 部署上线</a>
+            <a class="item " href="2.10summary.html">2.10. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第三章. 构建页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="3.1chapter.html">3.1. 章节说明</a>
+            <a class="item " href="3.2create-an.html">3.2. 创建应用</a>
+            <a class="item " href="3.3a-static-page.html">3.3. 静态页面</a>
+            <a class="item " href="3.4artisan-command.html">3.4. Artisan 命令</a>
+            <a class="item " href="3.5summary.html">3.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第四章. 优化页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="4.1chapter.html">4.1. 章节说明</a>
+            <a class="item " href="4.2style-beautification.html">4.2. 样式美化</a>
+            <a class="item " href="4.3laravel-front-end-workflow.html">4.3. Laravel 前端工作流</a>
+            <a class="item " href="4.4local-view.html">4.4. 局部视图</a>
+            <a class="item " href="4.5the-links-in-the-layout.html">4.5. 布局中的链接</a>
+            <a class="item " href="4.6user-registration.html">4.6. 用户注册页面</a>
+            <a class="item " href="4.7summary.html">4.7. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第五章. 用户模型
+        </div>
+        <div class="menu article">
+            <a class="item " href="5.1chapter.html">5.1. 章节说明</a>
+            <a class="item " href="5.2database-migration.html">5.2. 数据库迁移</a>
+            <a class="item " href="5.3check-the-database-table.html">5.3. 查看数据库表</a>
+            <a class="item " href="5.4model-file.html">5.4. 模型文件</a>
+            <a class="item " href="5.5create-a-user-object.html">5.5. 创建用户对象</a>
+            <a class="item " href="5.6to-find-the-user-object.html">5.6. 查找用户对象</a>
+            <a class="item " href="5.7update-user-object.html">5.7. 更新用户对象</a>
+            <a class="item " href="5.8summary.html">5.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第六章. 用户注册
+        </div>
+        <div class="menu article">
+            <a class="item " href="6.1chapter.html">6.1. 章节说明</a>
+            <a class="item " href="6.2according-to-the-users-information.html">6.2. 显示用户的信息</a>
+            <a class="item " href="6.3registration-form.html">6.3. 注册表单</a>
+            <a class="item " href="6.4the-user-data-validation.html">6.4. 用户数据验证</a>
+            <a class="item " href="6.5registration-failed-error-message.html">6.5. 注册失败错误消息</a>
+            <a class="item " href="6.6registered-successfully.html">6.6. 注册成功</a>
+            <a class="item " href="6.7using-postgresql-on-heroku.html">6.7. 在 Heroku 上使用 PostgreSQL</a>
+            <a class="item " href="6.8summary.html">6.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第七章. 会话管理
+        </div>
+        <div class="menu article">
+            <a class="item " href="7.1chapter.html">7.1. 章节说明</a>
+            <a class="item " href="7.2the-session.html">7.2. 会话</a>
+            <a class="item " href="7.3the-user-login.html">7.3. 用户登录</a>
+            <a class="item " href="7.4exit.html">7.4. 退出</a>
+            <a class="item " href="7.5remember-that-i.html">7.5. 记住我</a>
+            <a class="item " href="7.6summary.html">7.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第八章. 用户 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="8.1chapter.html">8.1. 章节说明</a>
+            <a class="item " href="8.2update-user.html">8.2. 更新用户</a>
+            <a class="item " href="8.3permissions-system.html">8.3. 权限系统</a>
+            <a class="item " href="8.4list-all-user.html">8.4. 列出所有用户</a>
+            <a class="item " href="8.5delete-user.html">8.5. 删除用户</a>
+            <a class="item " href="8.6summary.html">8.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第九章. 邮件发送
+        </div>
+        <div class="menu article">
+            <a class="item " href="9.1chapter.html">9.1. 章节说明</a>
+            <a class="item " href="9.2account-activation.html">9.2. 账户激活</a>
+            <a class="item " href="9.3password-reset.html">9.3. 密码重设</a>
+            <a class="item " href="9.4in-a-production-environment-to-send-mail.html">9.4. 在生产环境中发送邮件</a>
+            <a class="item " href="9.5summary.html">9.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十章. 微博 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="10.1chapter.html">10.1. 章节说明</a>
+            <a class="item " href="10.2weibo-model.html">10.2. 微博模型</a>
+            <a class="item " href="10.3according-to-weibo.html">10.3. 显示微博</a>
+            <a class="item " href="10.4weibo-related-operations.html">10.4. 微博相关的操作</a>
+            <a class="item " href="10.5summary.html">10.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十一章. 粉丝关系
+        </div>
+        <div class="menu article">
+            <a class="item " href="11.1chapter.html">11.1. 章节说明</a>
+            <a class="item " href="11.2fan-data-table.html">11.2. 粉丝数据表</a>
+            <a class="item " href="11.3focus-on-the-users-web-interface.html">11.3. 关注用户的网页界面</a>
+            <a class="item " href="11.4dynamic-flow.html">11.4. 动态流</a>
+            <a class="item " href="11.5summary.html">11.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十二章. 附录
+        </div>
+        <div class="menu article">
+            <a class="item " href="12.1proper-noun-index.html">12.1. 专有名词索引</a>
+            <a class="item " href="12.2command-line-index.html">12.2. 命令行索引</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十三章. 附言
+        </div>
+        <div class="menu article">
+            <a class="item " href="13.1the-next-step-study-suggest.html">13.1. 下一步的学习建议</a>
+        </div>
+    </div>
+</div>
+<!--left-->
+
+<div class="ui basic teal  launch right attached fixed button clicked-hide-guide user-has-done-btn"
+     data-act="stickymenu_sidebar_clicked">
+    <span class="duke-pulse stickymenu-sidebar-guide"></span>
+
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+</div>
+
+<div class="pusher">
+
+    <div class="main container">
+
+        <nav class="ui main borderless menu top stackable">
+            <div class="ui container">
+                <a class="header item" href="../index.html">
+                    Laravel 实战教程
+                    <div class="ui left pointing orange basic label" style="font-weight: normal;"> 全栈给我自由</div>
+                </a>
+
+
+                <a href="https://laravel-china.org/topics" target="_blank" class="item no-pjax">社区</a>
+                <a href="https://laravel-china.org/categories/4" target="_blank" class="item">问答</a>
+
+                <div class="ui fluid category search item">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+
+
+                <div class=" right menu stackable">
+
+                    <a class="ui item">
+                        <i class="icon gift"></i> 邀请好友
+                    </a>
+
+                    <a class="item" title="浏览历史">
+
+                        <span class="duke-pulse history-guide"></span>
+
+                        <i class="ui icon history grey middle disabled"></i>
+                    </a>
+
+                    <a class="item">
+                        <span class="ui basic circular label notification" id="notification-count">1</span>
+                    </a>
+
+                    <div class="ui simple item dropdown article stackable nav-user-item">
+                        <img class="ui avatar image"
+                             src="../images/21929_1517463384.png">
+                        &nbsp;
+
+                        SWKJ <i class="dropdown icon"></i>
+
+                        <div class="ui menu stackable">
+
+                            <a class="item">
+                                <i class="icon user"></i>
+                                个人中心
+                            </a>
+
+                            <a class="item">
+                                <i class="icon payment"></i>
+                                卡券中心
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="ui centered grid container stackable">
+
+            <div class="twelve wide column">
+
+
+                <div class="ui segment article-content">
+
+
+                    <div class="extra-padding">
+
+                        <h1>
+                            <i class="grey file text outline icon"></i>
+                            <span style="line-height: 34px;">1.3. Laravel 与 PHP </span>
+
+
+                            <div class="pull-right">
+
+
+                                <div class="ui labeled button tiny">
+
+                                    <div class="ui compact button tiny kb-star basic " data-act="star" data-id="545">
+
+                                        <i class="thumbs up icon"></i> <span class="state">点赞</span>
+                                    </div>
+                                    <a class="ui basic label star_count">22</a>
+                                </div>
+                            </div>
+
+
+                        </h1>
+
+                        <p class="book-article-meta">
+
+                            <a href="../index.html"><i
+                                    class="icon book"></i> Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</a>
+
+                            <span class="divider">/</span>
+
+                            <span class="relative clicked-hide-guide">
+                <a class="chapter-title user-has-done-btn" data-act="chapter_sidebar_clicked"
+                   href="javascript:void(0);"><i class="icon map signs"></i> 第一章. 基础信息</a>
+    </span>
+
+                        </p>
+
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui readme markdown-body content-body">
+                            <h2>为什么是 PHP？</h2>
+                            <p>PHP 全称是 PHP: Hypertext Preprocessor，译为：『超文本预处理器』。是一门开源脚本语言，专为『动态 Web 开发』而生。</p>
+                            <p>PHP 在服务器脚本语言市场占有率中遥遥领先于其他对手：</p>
+                            <img src="../images/f8M4vafntx.png"
+                                 width="520" alt="f8M4vafntx.png"/>
+                            <p>上图是由 <a
+                                    href="https://w3techs.com/technologies/overview/programming_language/all">W3Techs</a>
+                                网站提供的 <a href="https://w3techs.com/technologies/overview/programming_language/all">服务器端脚本语言市场占有率</a>
+                                排名，数据样本是 <a href="http://www.alexa.com/">Alexa</a> 世界排名 <strong>前一千万</strong> 的网站，其中
+                                82.6% 使用 PHP 构建，此数据每日更新。可以看出 PHP 惊人的市场占有率。世界上大部分的商业网站在使用 PHP，可想而知这些企业对 PHP 的人才需求能有多巨大。
+                            </p>
+                            <blockquote>
+                                <p>扩展阅读：<a href="https://zhuanlan.zhihu.com/p/26704744">为什么 PHP 是最好的语言？现在是，将来也会是</a></p>
+                            </blockquote>
+                            <h3>作为职业</h3>
+                            <p>如果你在选择职业，巨大的市场占有率有以下好处：</p>
+                            <ul>
+                                <li>人才需求大 - 好找工作，可以看下 <a href="https://laravel-china.org/categories/1">社区招聘列表</a>；</li>
+                                <li>学习的人多 - 资料多，<a href="https://laravel-china.org/">社区</a> 活跃；</li>
+                                <li>解决方案多 - 开发中基本上遇不到什么技术难题。</li>
+                            </ul>
+                            <h3>架构选型</h3>
+                            <p>如果你是创业者或者技术负责人，在做技术架构选型，PHP 的巨大的市场占有率有以下好处：</p>
+                            <ul>
+                                <li>招人好招 - 笔者喜爱 ROR（基于 Ruby 语言），但是在 PHP 有了 Laravel 后毫不犹豫就把公司的整个技术堆栈切到 PHP，最大原因就是
+                                    <strong>人好招</strong>，创业公司里，组建团队是个头痛的问题；
+                                </li>
+                                <li>解决方案多 - PHP 有很多优质的开源软件，拿过来直接就能使用。另外，作为日常开发，也是非常方便。举个有趣的例子：很多第三方开发者服务 SDK 包优先考虑的就是先出个
+                                    PHP 的 SDK，原因就是：PHP 占有率高。
+                                </li>
+                            </ul>
+                            <h2>什么是 Laravel？</h2>
+                            <p><a href="https://laravel.com/">Laravel</a> 是 Taylor Otwell 开发的一款基于 PHP 语言的 Web 开源框架，采用了
+                                MVC 的架构模式，在 2011 年 6 月正式发布了首个版本。</p>
+                            <p>由于 Laravel 具备 Rails 敏捷开发等优秀特质，深度集成 PHP 强大的扩展包（Composer）生态与 PHP 开发者广大的受众群，让 Laravel
+                                在发布之后的短短几年时间得到了极其迅猛的发展。我们通过 <a
+                                        href="https://www.google.com/trends/explore?date=2006-08-16%202016-09-16&amp;q=yii,CodeIgniter,Cakephp,Laravel,%2Fm%2F09cjcl&amp;hl=en-US&amp;tz=Etc%2FGMT-5:30&amp;tz=Etc%2FGMT-5:30">Google
+                                    Trends</a> 提供的趋势图（图 1.1）可以看出，Laravel 框架在过去十年，其增长速度在各类 PHP 框架中都是有史以来最快的，这也从正面直接反映出了
+                                Laravel 的强大，以及其未来非常可观的发展前景。</p>
+                            <p>图 1.1 - Google 趋势（Laravel 为绿色）</p>
+                            <img class="rm-style"
+                                 src="../images/gB25pGrFMP.png"
+                                 alt="gB25pGrFMP.png"/>
+                            <blockquote>
+                                <p>扩展阅读：<a href="https://zhuanlan.zhihu.com/p/24673684">数据说话 - 最火的 PHP 框架是哪个？</a></p>
+                            </blockquote>
+                            <h2>为何 Laravel 如此受欢迎？</h2>
+                            <p>一个优秀的工程师在构建一个语言框架时，应该懂得如何去协调好框架和语言之间的关系，并借助前人的智慧来思考框架的合理性与可扩展性。Laravel 的作者 Taylor Otwell
+                                无疑做到了这一点。</p>
+                            <p>若你之前对 Web 开发有所了解，那么你可能会知道有个叫 Ruby on Rails（简称 Rails）的知名 Web 开发框架。Rails 是基于 Ruby 语言构建的一个
+                                Web 开发框架，该框架有以下原则：</p>
+                            <ul>
+                                <li>强调与注重敏捷开发；</li>
+                                <li>约定高于配置（Convention over configuration）；</li>
+                                <li>DRY（Don't repeat yourself）不要重复自己，提倡代码重用；</li>
+                                <li>重视「编码愉悦性」。</li>
+                            </ul>
+                            <p>自诞生之日起，Rails 便受到了技术社区的广泛关注与讨论。而 Laravel 正是由于结合了 Rails 框架的这几项优秀特质，才使得其在 PHP 社区中备受推崇。</p>
+                            <h2>国内 Laravel 生态圈在哪？</h2>
+                            <p>Laravel 在国内的生态圈发展也日趋成熟，你可以很轻松的在网上找到很多 Laravel 相关的中文学习资料、技术讨论社区：</p>
+                            <ul>
+                                <li><a href="https://laravel-china.org/">Laravel China 社区</a> - 国内最大的 PHP / Laravel
+                                    开发者社区，由 Summer 在 2014 年创建；
+                                </li>
+                                <li><a href="https://laravel-china.org/docs">Laravel 中文文档</a> - Laravel China
+                                    社区维护的中文文档，涵盖 5.1, 5.2, 5.3, 5.4, 5.5 版本
+                                </li>
+                                <li><a href="https://laravel-china.org/news">Laravel 资讯专栏</a> - 为 Laravel 开发者提供最新最热的技术资讯
+                                </li>
+                                <li><a href="https://cs.laravel-china.org/">Laravel CheatSheat</a> - Laravel 速查表</li>
+                                <li><a href="https://laravel-china.org/composer">Composer 中文镜像</a> - Packagist 中国全量镜像，让
+                                    Composer 速度如飞；
+                                </li>
+                                <li>
+                                    <a href="https://laravel-china.org/topics/3626/laravel-remote-and-its-sails-and-freedom">Laravel
+                                        远程工作</a> - 做一个自由的程序员，选择一种自由的生活方式；
+                                </li>
+                            </ul>
+                            <h2>Laravel 版本类型有哪些？</h2>
+                            <p>Laravel 有两个版本类型：</p>
+                            <ol>
+                                <li>LTS 版本 - 长期支持版本，英文 Long Term Support 的缩写，此类版本是 Laravel 能提供的最长时间维护版本。</li>
+                                <li>一般发行版 - 只提供 6 个月的 Bug 修复支持，一年的安全修复支持。</li>
+                            </ol>
+                            <h3>什么是『长期支持』？</h3>
+                            <blockquote>
+                                <p>长期支持 （英语：Long-term
+                                    support，缩写：LTS）是一种软件的产品生命周期政策，特别是开源软件，它增加了软件开发过程及软件版本周期的可靠度。长期支持延长了软件维护的周期；它也改变了软件更新（补丁）的类型及频率以降低风险、费用及软件部署的中断时间，同时提升了软件的可靠性。但这并不必然包含技术支持。</p>
+                                <p>
+                                    在长期支持周期的开始，软件设计师会将软件特性冻结：他们制作补丁来修复程序错误及计算机安全隐患，但不会加入新的，可能会造成软件破坏的功能。软件维护者可能会单独发布补丁，或是将其置于维护版本、小数点版本或是服务包中发布。支持周期结束后，其称之为产品的生命周期结束。</p>
+                                <p>“长期支持”这个术语通常是保留给特殊的软件版本，其他版本会有更短的生命周期。通常来说，长期支持版本至少会被维护两年。<br/>
+                                    From
+                                    <a href="https://zh.wikipedia.org/w/index.php?title=%E9%95%B7%E6%9C%9F%E6%94%AF%E6%8F%B4&amp;redirect=no" target="_blank">维基百科</a>
+                                </p>
+                            </blockquote>
+                            <h2>Laravel 有着怎样的版本计划？</h2>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>版本</th>
+                                    <th>发布日期</th>
+                                    <th>版本类型</th>
+                                    <th>维护周期</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Laravel 5.1</td>
+                                    <td>2015 年 6 月</td>
+                                    <td>LTS 长久支持</td>
+                                    <td>Bug 修复 2017 年 6 月份，安全修复 2018 年 6 月份</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 5.2</td>
+                                    <td>2015 年 12 月</td>
+                                    <td>一般发行</td>
+                                    <td>提供 6 个月的 Bug 修复支持，一年的安全修复支持</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 5.3</td>
+                                    <td>2016 年 8 月</td>
+                                    <td>一般发行</td>
+                                    <td>提供 6 个月的 Bug 修复支持，一年的安全修复支持</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 5.4</td>
+                                    <td>2017 年 1 月</td>
+                                    <td>一般发行</td>
+                                    <td>提供 6 个月的 Bug 修复支持，一年的安全修复支持</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 5.5</td>
+                                    <td>2017 年 8 月</td>
+                                    <td>LTS 长久支持</td>
+                                    <td>Bug 修复 2019 年 8 月份，安全修复 2020 年 8 月份</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>需要注意的是，以上只是大致的计划，版本的最终发布时间会有所变动。 </p>
+                            <h2>如何选择 Laravel 版本？</h2>
+                            <p>不同角色，不同项目类型，有不同的建议：</p>
+                            <ul>
+                                <li>如果你是新手，目的只是为了学习，请直接选用最新版本；</li>
+                                <li>如果是现有项目，目的是学成后能对项目进行二次开发，请选用与项目匹配的版本进行学习；</li>
+                                <li>如果是商业项目，请优先考虑 LTS 版本；</li>
+                            </ul>
+                            <blockquote>
+                                <p>推荐阅读：<a href="https://laravel-china.org/topics/2595" target="_blank">《如何选择 Laravel 框架版本》</a> by
+                                    Summer</p>
+                            </blockquote>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <a class="ui basic button small  pull-left popover " data-content="1.2. 关于作者"
+                       href="1.2about-author.html"><i
+                            class="icon arrow left"></i> 上一篇</a>
+                    <a class="ui basic button small  pull-right popover " data-content="1.4. 如何正确阅读本书？"
+                       href="1.4reading-guide.html">下一篇 <i
+                            class="icon arrow right"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div class="item header">
+
+                    <div class="ui segment orange text-center" style="padding: 25px;">
+                        刻意练习，每日精进。
+                    </div>
+
+
+                    <div class="ui segment">
+
+                        <div class="ui three statistics">
+                            <div class="ui huge statistic">
+                                <div class="value">22</div>
+                                <div class="label">点赞</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">9179</div>
+                                <div class="label">浏览</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">1</div>
+                                <div class="label">评论</div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="ui stackable cards">
+                    <div class="ui  card column author-box grid" style="margin-top: 20px;">
+
+                        <div class="ui fluid" style="margin-top: 20px;">
+                            <div class="ui teal ribbon label"><i class="star icon"></i> 作者</div>
+                        </div>
+
+                        <a class="avatar-link">
+                            <img class="ui centered circular tiny image "
+                                 src="../images/1_1479342408.png">
+                            </img>
+                        </a>
+
+                        <div class="extra content ui center aligned container">
+                            <a class="header">Summer</a>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui sticky" style="padding-top:20px">
+                    <div class="ui  card column author-box grid " id="toc">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="circular ui icon button fixed feedback popover" data-content="建议与反馈 @Summer" data-position="left center">
+        <i class="icon talk outline"></i>
+    </a>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">友站</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a>
+                        <a href="https://easywechat.org/" class="item" target="_blank">EasyWechat</a>
+                        <a href="https://yousails.com/" class="item" target="_blank">优帆远扬</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">资源推荐</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://d.laravel-china.org/" class="item" target="_blank">Laravel 中文文档</a>
+                        <a href="https://cs.laravel-china.org/" class="item" target="_blank">Laravel 速查表</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted  header">Laravel 实战教程</h4>
+                    <p>
+                        编程是技能，不是知识，技能的唯一学习路径就是重复、实战性练习。
+                    </p>
+
+                    <p>
+                        <a class="ui teal button" href="https://laravel-china.org/contact"><i class="icon idea "></i>
+                            联系我
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ui inverted section divider"></div>
+            <div>
+
+                <p style="font-size:0.9em; margin-top:20px;margin-bottom: -8px;color: rgb(137, 137, 140);"
+                   class="ui inverted ">
+                    由 <a href="http://weibo.com/u/1837553744?is_hot=1" target="_blank"
+                         style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+
+</body>
+</html>

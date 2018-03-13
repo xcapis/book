@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="baidu-site-verification" content="MfC8ppEukL" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="hm5989AA5qOWRt4SjRmpClu004h3pj4sKMT34pNa">
+
+    <title>创建应用 | 《Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》 | Laravel 实战教程
+    </title>
+
+    <meta name="author" content="Summer" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="../images/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png"/>
+
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+    <style>
+        .ui.top.menu {border-top: 4px solid #f46660;}
+    </style>
+</head>
+<body class=" books-articles-show-page">
+<!--left-->
+<div class="ui vertical  sidebar menu left" style="z-index: 99999">
+    <div class="item">
+        <b>Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</b>
+    </div>
+    <div class="item">
+        <div class="header">
+            第一章. 基础信息
+        </div>
+        <div class="menu article">
+            <a class="item" href="1.1about-the-book.html">1.1. 序言</a>
+            <a class="item " href="1.2about-author.html">1.2. 关于作者</a>
+            <a class="item " href="1.3laravel-and-php.html">1.3. Laravel 与 PHP</a>
+            <a class="item " href="1.4reading-guide.html">1.4. 如何正确阅读本书？</a>
+            <a class="item " href="1.5writing-convention.html">1.5. 写作约定</a>
+            <a class="item " href="1.6release-notes.html">1.6. 发行说明</a>
+            <a class="item " href="1.7the-book-source-code.html">1.7. 本书源码</a>
+            <a class="item " href="1.8feedback-correction.html">1.8. 反馈纠错</a>
+            <a class="item " href="1.9faq.html">1.9. 常见问题</a>
+            <a class="item " href="1.10received-praise.html">1.10. 收到的赞誉</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第二章. 开发环境布置
+        </div>
+
+        <div class="menu article">
+            <a class="item " href="2.1the-editor-to-choose.html">2.1. 编辑器选用</a>
+            <a class="item " href="2.2command-line-tool.html">2.2. 命令行工具</a>
+            <a class="item " href="2.3the-development-environment-to-build.html">2.3. 开发环境搭建</a>
+            <a class="item " href="2.4development-environment-macos.html">2.4. 开发环境搭建 - MacOS</a>
+            <a class="item " href="2.5development-environment-windows.html">2.5. 开发环境搭建 - Windows</a>
+            <a class="item " href="2.6browser-selection.html">2.6. 浏览器选择</a>
+            <a class="item " href="2.7the-first-application-hello-laravel.html">2.7. 第一个应用，Hello Laravel！</a>
+            <a class="item " href="2.8git-and-making.html">2.8. Git 与 GitHub</a>
+            <a class="item " href="2.9the-deployment-of.html">2.9. 部署上线</a>
+            <a class="item " href="2.10summary.html">2.10. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第三章. 构建页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="3.1chapter.html">3.1. 章节说明</a>
+            <a class="item active" href="3.2create-an.html">3.2. 创建应用</a>
+            <a class="item " href="3.3a-static-page.html">3.3. 静态页面</a>
+            <a class="item " href="3.4artisan-command.html">3.4. Artisan 命令</a>
+            <a class="item " href="3.5summary.html">3.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第四章. 优化页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="4.1chapter.html">4.1. 章节说明</a>
+            <a class="item " href="4.2style-beautification.html">4.2. 样式美化</a>
+            <a class="item " href="4.3laravel-front-end-workflow.html">4.3. Laravel 前端工作流</a>
+            <a class="item " href="4.4local-view.html">4.4. 局部视图</a>
+            <a class="item " href="4.5the-links-in-the-layout.html">4.5. 布局中的链接</a>
+            <a class="item " href="4.6user-registration.html">4.6. 用户注册页面</a>
+            <a class="item " href="4.7summary.html">4.7. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第五章. 用户模型
+        </div>
+        <div class="menu article">
+            <a class="item " href="5.1chapter.html">5.1. 章节说明</a>
+            <a class="item " href="5.2database-migration.html">5.2. 数据库迁移</a>
+            <a class="item " href="5.3check-the-database-table.html">5.3. 查看数据库表</a>
+            <a class="item " href="5.4model-file.html">5.4. 模型文件</a>
+            <a class="item " href="5.5create-a-user-object.html">5.5. 创建用户对象</a>
+            <a class="item " href="5.6to-find-the-user-object.html">5.6. 查找用户对象</a>
+            <a class="item " href="5.7update-user-object.html">5.7. 更新用户对象</a>
+            <a class="item " href="5.8summary.html">5.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第六章. 用户注册
+        </div>
+        <div class="menu article">
+            <a class="item " href="6.1chapter.html">6.1. 章节说明</a>
+            <a class="item " href="6.2according-to-the-users-information.html">6.2. 显示用户的信息</a>
+            <a class="item " href="6.3registration-form.html">6.3. 注册表单</a>
+            <a class="item " href="6.4the-user-data-validation.html">6.4. 用户数据验证</a>
+            <a class="item " href="6.5registration-failed-error-message.html">6.5. 注册失败错误消息</a>
+            <a class="item " href="6.6registered-successfully.html">6.6. 注册成功</a>
+            <a class="item " href="6.7using-postgresql-on-heroku.html">6.7. 在 Heroku 上使用 PostgreSQL</a>
+            <a class="item " href="6.8summary.html">6.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第七章. 会话管理
+        </div>
+        <div class="menu article">
+            <a class="item " href="7.1chapter.html">7.1. 章节说明</a>
+            <a class="item " href="7.2the-session.html">7.2. 会话</a>
+            <a class="item " href="7.3the-user-login.html">7.3. 用户登录</a>
+            <a class="item " href="7.4exit.html">7.4. 退出</a>
+            <a class="item " href="7.5remember-that-i.html">7.5. 记住我</a>
+            <a class="item " href="7.6summary.html">7.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第八章. 用户 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="8.1chapter.html">8.1. 章节说明</a>
+            <a class="item " href="8.2update-user.html">8.2. 更新用户</a>
+            <a class="item " href="8.3permissions-system.html">8.3. 权限系统</a>
+            <a class="item " href="8.4list-all-user.html">8.4. 列出所有用户</a>
+            <a class="item " href="8.5delete-user.html">8.5. 删除用户</a>
+            <a class="item " href="8.6summary.html">8.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第九章. 邮件发送
+        </div>
+        <div class="menu article">
+            <a class="item " href="9.1chapter.html">9.1. 章节说明</a>
+            <a class="item " href="9.2account-activation.html">9.2. 账户激活</a>
+            <a class="item " href="9.3password-reset.html">9.3. 密码重设</a>
+            <a class="item " href="9.4in-a-production-environment-to-send-mail.html">9.4. 在生产环境中发送邮件</a>
+            <a class="item " href="9.5summary.html">9.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十章. 微博 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="10.1chapter.html">10.1. 章节说明</a>
+            <a class="item " href="10.2weibo-model.html">10.2. 微博模型</a>
+            <a class="item " href="10.3according-to-weibo.html">10.3. 显示微博</a>
+            <a class="item " href="10.4weibo-related-operations.html">10.4. 微博相关的操作</a>
+            <a class="item " href="10.5summary.html">10.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十一章. 粉丝关系
+        </div>
+        <div class="menu article">
+            <a class="item " href="11.1chapter.html">11.1. 章节说明</a>
+            <a class="item " href="11.2fan-data-table.html">11.2. 粉丝数据表</a>
+            <a class="item " href="11.3focus-on-the-users-web-interface.html">11.3. 关注用户的网页界面</a>
+            <a class="item " href="11.4dynamic-flow.html">11.4. 动态流</a>
+            <a class="item " href="11.5summary.html">11.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十二章. 附录
+        </div>
+        <div class="menu article">
+            <a class="item " href="12.1proper-noun-index.html">12.1. 专有名词索引</a>
+            <a class="item " href="12.2command-line-index.html">12.2. 命令行索引</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十三章. 附言
+        </div>
+        <div class="menu article">
+            <a class="item " href="13.1the-next-step-study-suggest.html">13.1. 下一步的学习建议</a>
+        </div>
+    </div>
+</div>
+<!--left-->
+
+<div class="ui basic teal  launch right attached fixed button">
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+</div>
+
+<div class="pusher">
+
+    <div class="main container">
+
+        <nav class="ui main borderless menu top stackable">
+            <div class="ui container">
+                <a href="../index.html" class="header item">
+                    Laravel 实战教程 <div class="ui left pointing orange basic label" style="font-weight: normal;"> 全栈给我自由 </div>
+                </a>
+
+
+                <a href="https://laravel-china.org/topics" class="item no-pjax" >社区</a>
+                <a href="https://laravel-china.org/categories/4" class="item">问答</a>
+
+                <div class="ui fluid category search item">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+
+
+                <div class=" right menu stackable">
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/login"><i class="icon user "></i> 登录 </a>
+                    </div>
+
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/register"><i class="icon signup "></i> 注册 </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <div class="ui centered grid container stackable">
+
+            <div class="twelve wide column">
+
+
+                <div class="ui segment article-content">
+
+
+                    <div class="extra-padding">
+
+                        <h1>
+                            <i class="grey file text outline icon"></i>
+                            <span style="line-height: 34px;">3.2. 创建应用 </span>
+
+
+
+
+
+                        </h1>
+
+                        <p class="book-article-meta">
+
+                            <a href="../index.html"><i class="icon book"></i> Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</a>
+
+                            <span class="divider">/</span>
+
+                            <span class="relative clicked-hide-guide">
+                <a class="chapter-title user-has-done-btn" data-act="chapter_sidebar_clicked" href="javascript:void(0);"><i class="icon map signs"></i> 第三章. 构建页面</a>
+    </span>
+
+                        </p>
+
+
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui readme markdown-body content-body">
+                            <h2>做好准备</h2>
+                            <p>由于我们接下来的开发都会在 Homestead 上进行，因此，在开始本章教程之前，请保证你的 Homestead 虚拟机已成功开启并登录。使用下面命令来启动和登录 Homestead：</p>
+                            <pre><code class="language-bash">&gt; cd ~/Homestead &amp;&amp; vagrant up
+&gt; vagrant ssh</code></pre>
+                            <p>在虚拟机中进入 Code 文件夹：</p>
+                            <pre><code class="language-bash">$ cd ~/Code</code></pre>
+                            <h2>创建 sample 应用</h2>
+                            <p>下面让我们来使用 Composer 创建一个名为 sample 的应用，后面我们将基于这个应用做更多的功能完善：</p>
+                            <pre><code class="language-bash">$ cd ~/Code
+$ composer create-project laravel/laravel sample --prefer-dist "5.5.*"</code></pre>
+                            <p><img src="../images/ga52T13JBQ.png" alt="file" /></p>
+                            <h2>修改 hosts</h2>
+                            <p>每个 Laravel 项目创建完成后的第一步，即是对 Homestead 进行配置，让应用能在 Homestead 的开发环境上跑起来。</p>
+                            <p>为了方便记忆，一般我们都会将 IP 映射为域名，我们能够通过设置 hosts 文件来指定 IP 与域名之间的映射关系，由于我们在 Homestead 上默认使用 <code>192.168.10.10</code> 来作为虚拟机的 IP 的地址，因此我们需要在系统的 <code>hosts</code> 文件中将域名指向该 IP 上。</p>
+                            <p>Mac 下打开 Hosts 文件：</p>
+                            <pre><code class="language-bash">&gt; atom /etc/hosts</code></pre>
+                            <p>Windows 下打开 Hosts 文件：</p>
+                            <pre><code class="language-bash">&gt; atom C:/Windows/System32/Drivers/etc/hosts</code></pre>
+                            <blockquote>
+                                <p>Windows 下，如果你没有集成 <code>atom</code> 命令的话， 请使用编辑器直接打开文件，文件路径在 <code>C:\Windows\System32\Drivers\etc\hosts</code> 。</p>
+                            </blockquote>
+                            <p>文件成功打开后，在 <code>hosts</code> 文件最后面新增下面一行以完成设置：</p>
+                            <pre><code class=" language-php">192.168.10.10   sample.test</code></pre>
+                            <h2>新增站点</h2>
+                            <p>如果你安装了 Atom，可通过运行下面命令打开 <code>Homestead.yaml</code> 文件：</p>
+                            <pre><code class="language-bash">&gt; atom ~/Homestead/Homestead.yaml</code></pre>
+                            <p>在 <code>Homestead.yaml</code> 文件中新增 <code>sample</code> 应用的 <code>sites</code> 和 <code>databases</code> 的相关设置：</p>
+                            <pre><code class="language-yaml">---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Code
+      to: /home/vagrant/Code
+
+sites:
+    - map: homestead.test
+      to: /home/vagrant/Code/Laravel/public
+    - map: sample.test # &lt;--- 这里
+      to: /home/vagrant/Code/sample/public # &lt;--- 这里
+
+databases:
+    - homestead
+    - sample # &lt;--- 这里
+
+variables:
+    - key: APP_ENV
+      value: local
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 93000
+#       to: 9300
+#     - send: 7777
+#       to: 777
+#       protocol: udp</code></pre>
+                            <p>我们主要设置了 <code>sites</code> 和 <code>databases</code> 两项。 <code>sites</code> 会将域名 <code>sample.test</code> 映射到虚拟机的 <code>/home/vagrant/Code/sample/public</code> 文件夹上，而 <code>databases</code> 则为新创建的项目指定数据库名。</p>
+                            <h2>重启虚拟机</h2>
+                            <p>在我们每次对 <code>Homestead.yaml</code> 文件进行了更改之后，都需要运行下面命令来使其更改生效：</p>
+                            <pre><code class="language-bash">&gt; cd ~/Homestead &amp;&amp; vagrant provision &amp;&amp; vagrant reload</code></pre>
+                            <ul><li><code>vagrant provision</code> 是命令 Vagrant 重新加载 <code>Homestead.yaml</code> 配置；</li>
+                                <li><code>vagrant reload</code> 是重启虚拟机使更改生效。</li>
+                            </ul><h2>.env 文件</h2>
+                            <p>接下来，我们还需要对应用根目录下的 <code>.env</code> 文件进行设置，为应用指定数据库名称 <code>sample</code>。</p>
+                            <p><em>.env</em></p>
+                            <pre><code class=" language-php">.
+.
+.
+DB_DATABASE=sample
+.
+.
+.</code></pre>
+                            <p>在 <code>.env</code> 文件中，除了 <code>DB_DATABASE</code> 之外还有其它的设置信息，接下来让我们对里面的几项配置信息进行简单讲解。</p>
+                            <p>一般来说，在进行实际应用的开发过程中，应用会拥有不同的运行环境，通常会有以下环境：</p>
+                            <ul><li>本地开发环境</li>
+                                <li>测试环境</li>
+                                <li>生产环境</li>
+                            </ul><p>在不同环境中，我们可能会使用不同的数据库或邮件发送驱动等配置，这时候则需要通过 <code>.env</code> 文件来针对不同的运行环境作不同的设置。比如上面我们所编辑的 <code>.env</code> 文件配置将应用在本地的开发环境（local）上。</p>
+                            <p><code>.env</code> 支持对应用的进行简单配置，比如你可以通过 <code>APP_ENV</code> 来设定当前应用的运行环境，使用 <code>APP_DEBUG</code> 来设定是否在应用报错时显示调试信息，使用 <code>APP_KEY</code> 来生成应用的密钥用于加密一些较为敏感的数据。</p>
+                            <pre><code class=" language-php">APP_ENV=local
+APP_DEBUG=true
+APP_KEY=your_app_key</code></pre>
+                            <p>我们也可以对数据库的连接方式、数据库名、用户名密码等做相关配置：</p>
+                            <pre><code class=" language-php">DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_DATABASE=sample
+DB_USERNAME=homestead
+DB_PASSWORD=secret</code></pre>
+                            <p>缓存、会话、队列等驱动的相关配置信息：</p>
+                            <pre><code class=" language-php">CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync</code></pre>
+                            <p>Redis 相关的配置信息：</p>
+                            <pre><code class=" language-php">REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379</code></pre>
+                            <p>邮件相关的配置信息：</p>
+                            <pre><code class=" language-php">MAIL_DRIVER=smtp
+MAIL_HOST=mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null</code></pre>
+                            <p>在完成对 <code>.env</code> 文件的设置后，我们便可以通过传参给 <code>getenv</code> 方法来获取到 <code>.env</code> 文件中指定的值，如调用 <code>getenv('APP_ENV')</code> 将返回 <code>local</code>。</p>
+                            <h2>访问应用</h2>
+                            <p>现在让我们在 Chrome 浏览器中打开 <a href="http://sample.test">http://sample.test</a> 你应该能看到有如下界面显示：</p>
+                            <p><img src="../images/f1GwEAN65s.png" alt="file" /></p>
+                            <h2>Git 代码版本控制</h2>
+                            <p>为了在接下来更好的追踪项目代码的更改，我们还需要将新建的 Laravel 项目纳入到 Git 版本管理中：</p>
+                            <pre><code class="language-bash">$ cd ~/Code/sample
+$ git init
+$ git add -A
+$ git commit -m "Initial commit"</code></pre>
+                            <p>我们前面已讨论过关于使用 GitHub 的种种好处，而现在是我们开始正式应用它的时候了。熟悉一个东西最快的方法就是不断训练，不断重复，因此本教程接下来项目构建的代码都将统一托管到 GitHub 上，以便让你对 GitHub 的使用更加熟悉。现在，我们需要在 GitHub 上新建一个名为 <code>sample</code> 的项目 <a href="https://github.com/new">点击创建新项目</a>，并将代码推送上去：</p>
+                            <p>注意请把下面的 <code>&lt;username&gt;</code> 替换为你的用户名。</p>
+                            <pre><code class="language-bash">$ git remote add origin git@github.com:&lt;username&gt;/sample.git
+$ git push -u origin master</code></pre>
+                            <h2>上线代码</h2>
+                            <p>为了降低项目接下来持续部署的出错率，我们最好在一开始就将项目部署到 Heroku 上。通过在前面教程的学习，我们知道在每个 Laravel 项目开始构建时，都需要对 Heroku 进行以 4 个步骤的配置才能正常使用。</p>
+                            <p>1、创建一个 Heroku App：</p>
+                            <pre><code class="language-bash">$ heroku create</code></pre>
+                            <p>2、配置 <code>Procfile</code> 文件：</p>
+                            <pre><code class="language-bash">$ echo web: vendor/bin/heroku-php-apache2 public/ &gt; Procfile
+$ git add -A
+$ git commit -m "Procfile for Heroku"
+$ git push
+$ heroku buildpacks:set heroku/php</code></pre>
+                            <p>3、生成 App Key：</p>
+                            <pre><code class="language-bash">$ php artisan key:generate
+Application key [base64:MVTsBvo52CJl3Ud1/4gAsqnDzHVaw4EhgpE6oxxx4=] set successfully.</code></pre>
+                            <p>将生成的 App Key （如以上 <code>base64:MVTsBvo52CJl3Ud1/4gAsqnDzHVaw4EhgpE6oxxx4=</code> ） 替换掉下面命令的 <code>&lt;your_app_key&gt;</code> 并运行命令：</p>
+                            <pre><code class="language-bash">$ heroku config:set APP_KEY=&lt;your_app_key&gt;</code></pre>
+                            <p>4、配置基本完成，将代码推送到 Heroku 上：</p>
+                            <pre><code class="language-bash">$ git push heroku master</code></pre>
+                            <p>使用以下命令查看 Heroku 站点地址：</p>
+                            <pre><code class="language-bash">$ heroku domains
+=== dry-bastion-64171 Heroku Domain
+dry-bastion-64171.herokuapp.com</code></pre>
+                            <p>注意以上的 <code>dry-bastion-64171</code> 为变量，每一个不同的 Heroku 都会不一样。直接访问域名即可看到：</p>
+                            <p><img src="../images/AGe73TOIyP.png" alt="file" /></p>
+                            <p>使用 Heroku 过程中如果出现问题，则可以使用下面命令来输出生产环境上的日志进行排错：</p>
+                            <pre><code class="language-bash">$ heroku logs</code></pre>
+                            <p>在接下来的教程中，为了保证我们的代码风格一致，以避免引起不必要的歧义。我们在 Atom 上安装一个叫 <a href="https://atom.io/packages/editorconfig">EditorConfig</a> 的插件，在进行团队协作开发时，这个插件能起到很大作用。安装完成之后，我们需要在 Laravel 应用的根目录下添加 <code>.editorconfig</code> 文件，并写入如下的配置信息。</p>
+                            <p><em>.editorconfig</em></p>
+                            <pre><code class=" language-php"># coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+
+# Change these settings to your own preference
+indent_style = space
+indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.{js,html,blade.php,css,scss}]
+indent_style = space
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false</code></pre>
+                            <p>接着让我们将该文件加入到版本控制中。</p>
+                            <pre><code class="language-bash">$ git add -A
+$ git commit -m "Add .editorconfig"</code></pre>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <a class="ui basic button small  pull-left popover " data-content="3.1. 章节说明" href="3.1chapter.html"><i class="icon arrow left"></i> 上一篇</a>
+                    <a class="ui basic button small  pull-right popover " data-content="3.3. 静态页面" href="3.3a-static-page.html">下一篇 <i class="icon arrow right"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="item header">
+
+                    <div class="ui segment orange text-center" style="padding: 25px;">
+                        刻意练习，每日精进。
+                    </div>
+
+
+                    <div class="ui segment">
+
+                        <div class="ui three statistics">
+                            <div class="ui huge statistic">
+                                <div class="value">22</div>
+                                <div class="label">点赞</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">9179</div>
+                                <div class="label">浏览</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">1</div>
+                                <div class="label">评论</div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="ui stackable cards">
+                    <div class="ui  card column author-box grid" style="margin-top: 20px;">
+
+                        <div class="ui fluid" style="margin-top: 20px;">
+                            <div class="ui teal ribbon label"><i class="star icon"></i> 作者</div>
+                        </div>
+
+                        <a class="avatar-link">
+                            <img class="ui centered circular tiny image "
+                                 src="../images/1_1479342408.png">
+                            </img>
+                        </a>
+
+                        <div class="extra content ui center aligned container">
+                            <a class="header">Summer</a>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui sticky" style="padding-top:20px">
+                    <div class="ui  card column author-box grid " id="toc">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="circular ui icon button fixed feedback popover" data-content="建议与反馈 @Summer" data-position="left center">
+        <i class="icon talk outline"></i>
+    </a>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">友站</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a>
+                        <a href="https://easywechat.org/" class="item" target="_blank">EasyWechat</a>
+                        <a href="https://yousails.com/" class="item" target="_blank">优帆远扬</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">资源推荐</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://d.laravel-china.org/" class="item" target="_blank">Laravel 中文文档</a>
+                        <a href="https://cs.laravel-china.org/" class="item" target="_blank">Laravel 速查表</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted  header">Laravel 实战教程</h4>
+                    <p>
+                        编程是技能，不是知识，技能的唯一学习路径就是重复、实战性练习。
+                    </p>
+
+                    <p>
+                        <a class="ui teal button" href="https://laravel-china.org/contact"><i class="icon idea "></i>
+                            联系我
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ui inverted section divider"></div>
+            <div>
+
+                <p style="font-size:0.9em; margin-top:20px;margin-bottom: -8px;color: rgb(137, 137, 140);"
+                   class="ui inverted ">
+                    由 <a href="http://weibo.com/u/1837553744?is_hot=1" target="_blank"
+                         style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+
+</body>
+</html>

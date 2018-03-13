@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="baidu-site-verification" content="MfC8ppEukL" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="hm5989AA5qOWRt4SjRmpClu004h3pj4sKMT34pNa">
+
+    <title>列出所有用户 | 《Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》 | Laravel 实战教程
+    </title>
+
+    <meta name="author" content="Summer" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="../images/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png"/>
+
+    <!-- Styles -->
+    <link href="../css/app.css" rel="stylesheet">
+    <style>
+        .ui.top.menu {border-top: 4px solid #f46660;}
+    </style>
+</head>
+<body class=" books-articles-show-page">
+<!--left-->
+<div class="ui vertical  sidebar menu left" style="z-index: 99999">
+    <div class="item">
+        <b>Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</b>
+    </div>
+    <div class="item">
+        <div class="header">
+            第一章. 基础信息
+        </div>
+        <div class="menu article">
+            <a class="item" href="1.1about-the-book.html">1.1. 序言</a>
+            <a class="item " href="1.2about-author.html">1.2. 关于作者</a>
+            <a class="item " href="1.3laravel-and-php.html">1.3. Laravel 与 PHP</a>
+            <a class="item " href="1.4reading-guide.html">1.4. 如何正确阅读本书？</a>
+            <a class="item " href="1.5writing-convention.html">1.5. 写作约定</a>
+            <a class="item " href="1.6release-notes.html">1.6. 发行说明</a>
+            <a class="item " href="1.7the-book-source-code.html">1.7. 本书源码</a>
+            <a class="item " href="1.8feedback-correction.html">1.8. 反馈纠错</a>
+            <a class="item " href="1.9faq.html">1.9. 常见问题</a>
+            <a class="item " href="1.10received-praise.html">1.10. 收到的赞誉</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第二章. 开发环境布置
+        </div>
+
+        <div class="menu article">
+            <a class="item " href="2.1the-editor-to-choose.html">2.1. 编辑器选用</a>
+            <a class="item " href="2.2command-line-tool.html">2.2. 命令行工具</a>
+            <a class="item " href="2.3the-development-environment-to-build.html">2.3. 开发环境搭建</a>
+            <a class="item " href="2.4development-environment-macos.html">2.4. 开发环境搭建 - MacOS</a>
+            <a class="item " href="2.5development-environment-windows.html">2.5. 开发环境搭建 - Windows</a>
+            <a class="item " href="2.6browser-selection.html">2.6. 浏览器选择</a>
+            <a class="item " href="2.7the-first-application-hello-laravel.html">2.7. 第一个应用，Hello Laravel！</a>
+            <a class="item " href="2.8git-and-making.html">2.8. Git 与 GitHub</a>
+            <a class="item " href="2.9the-deployment-of.html">2.9. 部署上线</a>
+            <a class="item " href="2.10summary.html">2.10. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第三章. 构建页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="3.1chapter.html">3.1. 章节说明</a>
+            <a class="item " href="3.2create-an.html">3.2. 创建应用</a>
+            <a class="item " href="3.3a-static-page.html">3.3. 静态页面</a>
+            <a class="item " href="3.4artisan-command.html">3.4. Artisan 命令</a>
+            <a class="item " href="3.5summary.html">3.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第四章. 优化页面
+        </div>
+        <div class="menu article">
+            <a class="item " href="4.1chapter.html">4.1. 章节说明</a>
+            <a class="item " href="4.2style-beautification.html">4.2. 样式美化</a>
+            <a class="item " href="4.3laravel-front-end-workflow.html">4.3. Laravel 前端工作流</a>
+            <a class="item " href="4.4local-view.html">4.4. 局部视图</a>
+            <a class="item " href="4.5the-links-in-the-layout.html">4.5. 布局中的链接</a>
+            <a class="item " href="4.6user-registration.html">4.6. 用户注册页面</a>
+            <a class="item " href="4.7summary.html">4.7. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第五章. 用户模型
+        </div>
+        <div class="menu article">
+            <a class="item " href="5.1chapter.html">5.1. 章节说明</a>
+            <a class="item " href="5.2database-migration.html">5.2. 数据库迁移</a>
+            <a class="item " href="5.3check-the-database-table.html">5.3. 查看数据库表</a>
+            <a class="item " href="5.4model-file.html">5.4. 模型文件</a>
+            <a class="item " href="5.5create-a-user-object.html">5.5. 创建用户对象</a>
+            <a class="item " href="5.6to-find-the-user-object.html">5.6. 查找用户对象</a>
+            <a class="item " href="5.7update-user-object.html">5.7. 更新用户对象</a>
+            <a class="item " href="5.8summary.html">5.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第六章. 用户注册
+        </div>
+        <div class="menu article">
+            <a class="item " href="6.1chapter.html">6.1. 章节说明</a>
+            <a class="item " href="6.2according-to-the-users-information.html">6.2. 显示用户的信息</a>
+            <a class="item " href="6.3registration-form.html">6.3. 注册表单</a>
+            <a class="item " href="6.4the-user-data-validation.html">6.4. 用户数据验证</a>
+            <a class="item " href="6.5registration-failed-error-message.html">6.5. 注册失败错误消息</a>
+            <a class="item " href="6.6registered-successfully.html">6.6. 注册成功</a>
+            <a class="item " href="6.7using-postgresql-on-heroku.html">6.7. 在 Heroku 上使用 PostgreSQL</a>
+            <a class="item " href="6.8summary.html">6.8. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第七章. 会话管理
+        </div>
+        <div class="menu article">
+            <a class="item " href="7.1chapter.html">7.1. 章节说明</a>
+            <a class="item " href="7.2the-session.html">7.2. 会话</a>
+            <a class="item " href="7.3the-user-login.html">7.3. 用户登录</a>
+            <a class="item " href="7.4exit.html">7.4. 退出</a>
+            <a class="item " href="7.5remember-that-i.html">7.5. 记住我</a>
+            <a class="item " href="7.6summary.html">7.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第八章. 用户 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="8.1chapter.html">8.1. 章节说明</a>
+            <a class="item " href="8.2update-user.html">8.2. 更新用户</a>
+            <a class="item " href="8.3permissions-system.html">8.3. 权限系统</a>
+            <a class="item active" href="8.4list-all-user.html">8.4. 列出所有用户</a>
+            <a class="item " href="8.5delete-user.html">8.5. 删除用户</a>
+            <a class="item " href="8.6summary.html">8.6. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第九章. 邮件发送
+        </div>
+        <div class="menu article">
+            <a class="item " href="9.1chapter.html">9.1. 章节说明</a>
+            <a class="item " href="9.2account-activation.html">9.2. 账户激活</a>
+            <a class="item " href="9.3password-reset.html">9.3. 密码重设</a>
+            <a class="item " href="9.4in-a-production-environment-to-send-mail.html">9.4. 在生产环境中发送邮件</a>
+            <a class="item " href="9.5summary.html">9.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十章. 微博 CRUD
+        </div>
+        <div class="menu article">
+            <a class="item " href="10.1chapter.html">10.1. 章节说明</a>
+            <a class="item " href="10.2weibo-model.html">10.2. 微博模型</a>
+            <a class="item " href="10.3according-to-weibo.html">10.3. 显示微博</a>
+            <a class="item " href="10.4weibo-related-operations.html">10.4. 微博相关的操作</a>
+            <a class="item " href="10.5summary.html">10.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十一章. 粉丝关系
+        </div>
+        <div class="menu article">
+            <a class="item " href="11.1chapter.html">11.1. 章节说明</a>
+            <a class="item " href="11.2fan-data-table.html">11.2. 粉丝数据表</a>
+            <a class="item " href="11.3focus-on-the-users-web-interface.html">11.3. 关注用户的网页界面</a>
+            <a class="item " href="11.4dynamic-flow.html">11.4. 动态流</a>
+            <a class="item " href="11.5summary.html">11.5. 小结</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十二章. 附录
+        </div>
+        <div class="menu article">
+            <a class="item " href="12.1proper-noun-index.html">12.1. 专有名词索引</a>
+            <a class="item " href="12.2command-line-index.html">12.2. 命令行索引</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="header">
+            第十三章. 附言
+        </div>
+        <div class="menu article">
+            <a class="item " href="13.1the-next-step-study-suggest.html">13.1. 下一步的学习建议</a>
+        </div>
+    </div>
+</div>
+<!--left-->
+
+<div class="ui basic teal  launch right attached fixed button">
+    <i class="content icon"></i>
+    <span class="text">Menu</span>
+</div>
+
+<div class="pusher">
+
+    <div class="main container">
+
+        <nav class="ui main borderless menu top stackable">
+            <div class="ui container">
+                <a href="../index.html" class="header item">
+                    Laravel 实战教程 <div class="ui left pointing orange basic label" style="font-weight: normal;"> 全栈给我自由 </div>
+                </a>
+
+
+                <a href="https://laravel-china.org/topics" class="item no-pjax" >社区</a>
+                <a href="https://laravel-china.org/categories/4" class="item">问答</a>
+
+                <div class="ui fluid category search item">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+
+
+                <div class=" right menu stackable">
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/login"><i class="icon user "></i> 登录 </a>
+                    </div>
+
+                    <div class="item">
+                        <a class="ui basic green small button" href="https://laravel-china.org/auth/register"><i class="icon signup "></i> 注册 </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+
+        <div class="ui centered grid container stackable">
+
+            <div class="twelve wide column">
+
+
+                <div class="ui segment article-content">
+
+
+                    <div class="extra-padding">
+
+                        <h1>
+                            <i class="grey file text outline icon"></i>
+                            <span style="line-height: 34px;">8.4. 列出所有用户 </span>
+
+
+
+
+
+                        </h1>
+
+                        <p class="book-article-meta">
+
+                            <a href="../index.html"><i class="icon book"></i> Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )</a>
+
+                            <span class="divider">/</span>
+
+                            <span class="relative clicked-hide-guide">
+                <a class="chapter-title user-has-done-btn" data-act="chapter_sidebar_clicked" href="javascript:void(0);"><i class="icon map signs"></i> 第八章. 用户 CRUD</a>
+    </span>
+
+                        </p>
+
+
+
+                        <div class="ui divider"></div>
+
+                        <div class="ui readme markdown-body content-body">
+                            <h2>列出所有用户</h2>
+                            <p>本节我们将从数据库取出所有用户数据，并在用户列表页面将所有用户进行展示，并在顶部导航添加访问入口。最后我们还会为 1 号加上管理员权限，让他可以删除其他的用户。</p>
+                            <h2>用户列表</h2>
+                            <p>根据我们前面使用 <code>resource</code> 方法生成的符合 RESTful 架构的路由可知，用户列表对应用户控制器的 <code>index</code> 动作，页面 URL 对应 <code>/users</code>。接下来我们将在用户控制器中加入 <code>index</code> 动作。并且因为用户列表的访问权限是公开的，所以我们还需要在 Auth 中间件 <code>except</code> 中新增 <code>index</code> 动作来允许游客访问。</p>
+                            <p><em>app/Http/Controllers/UsersController.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+.
+.
+.
+class UsersController extends Controller
+{
+    public function __construct()
+    {
+        $this-&gt;middleware('auth', [
+            'except' =&gt; ['show', 'create', 'store', 'index']
+        ]);
+        .
+        .
+        .
+    }
+
+    public function index()
+    {
+        $users = User::all();
+        return view('users.index', compact('users'));
+    }
+    .
+    .
+    .
+}</code></pre>
+                            <p>可以看到，在 <code>index</code> 方法中，我们使用 Eloquent 用户模型将所有用户的数据一下子完全取出来了，这么做会影响应用的性能，后面我们再来对该代码进行优化，通过分页的方式来读取用户数据。在将用户数据取出之后，与 <code>index</code> 视图进行绑定，这样便可以在视图中使用 <code>$users</code> 来访问所有用户实例。</p>
+                            <p>接下来让我们继续创建 <code>index</code> 视图，用于显示所有用户列表的信息。</p>
+                            <p><em>resources/views/users/index.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', '所有用户')
+
+@section('content')
+&lt;div class="col-md-offset-2 col-md-8"&gt;
+  &lt;h1&gt;所有用户&lt;/h1&gt;
+  &lt;ul class="users"&gt;
+    @foreach ($users as $user)
+      &lt;li&gt;
+        &lt;img src="{{ $user-&gt;gravatar() }}" alt="{{ $user-&gt;name }}" class="gravatar"/&gt;
+        &lt;a href="{{ route('users.show', $user-&gt;id )}}" class="username"&gt;{{ $user-&gt;name }}&lt;/a&gt;
+      &lt;/li&gt;
+    @endforeach
+  &lt;/ul&gt;
+&lt;/div&gt;
+@stop</code></pre>
+                            <p>我们使用 <code>@foreach</code> 的方法将所有用户的数据逐个输出，并在页面上显示他们的头像和用户名。</p>
+                            <p>针对用户列表视图，我们再来进行样式优化。</p>
+                            <p><em>resources/assets/sass/app.scss</em></p>
+                            <pre><code class="language-scss">.
+.
+.
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}</code></pre>
+                            <p>现在用户列表页已经可以访问了，接下来让我们对顶部导航进行编辑，为用户列表加上指定链接，方便用户跳转到用户列表页面进行查看。</p>
+                            <p><em>resources/views/layouts/_header.blade.php</em></p>
+                            <pre><code class="language-html">&lt;header class="navbar navbar-fixed-top navbar-inverse"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-offset-1 col-md-10"&gt;
+      &lt;a href="/" id="logo"&gt;Sample App&lt;/a&gt;
+      &lt;nav&gt;
+        &lt;ul class="nav navbar-nav navbar-right"&gt;
+          @if (Auth::check())
+            &lt;li&gt;&lt;a href="{{ route('users.index') }}"&gt;用户列表&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="dropdown"&gt;
+              &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;
+                {{ Auth::user()-&gt;name }} &lt;b class="caret"&gt;&lt;/b&gt;
+              &lt;/a&gt;
+              &lt;ul class="dropdown-menu"&gt;
+                &lt;li&gt;&lt;a href="{{ route('users.show', Auth::user()-&gt;id) }}"&gt;个人中心&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{ route('users.edit', Auth::user()-&gt;id) }}"&gt;编辑资料&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="divider"&gt;&lt;/li&gt;
+                &lt;li&gt;
+                  &lt;a id="logout" href="#"&gt;
+                    &lt;form action="{{ route('logout') }}" method="POST"&gt;
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      &lt;button class="btn btn-block btn-danger" type="submit" name="button"&gt;退出&lt;/button&gt;
+                    &lt;/form&gt;
+                  &lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          @else
+            &lt;li&gt;&lt;a href="{{ route('help') }}"&gt;帮助&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="{{ route('login') }}"&gt;登录&lt;/a&gt;&lt;/li&gt;
+          @endif
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+                            <p>在做完上面这一切工作之后，用户列表页面已经能够正常访问了，但现在还有两个问题：</p>
+                            <ol><li>注册用户太少；</li>
+                                <li>用户列表页不支持分页浏览，用户量大的时候会影响性能和用户体验；</li>
+                            </ol>
+
+                            <p>接下来让我们来着手解决这两个问题。</p>
+                            <h2>示例用户</h2>
+                            <p>在实际的项目开发过程中，我们经常会用到一些假数据来对数据库进行填充以方便调试程序，原始的做法是手工一个个在数据库中创建，或者从队友的机器那导出数据填充到开发机器中。Laravel 提供了一套更加现代化、非常简单易用的数据填充方案。接下来让我们使用 Laravel 提供的数据填充来批量生成假用户。</p>
+                            <p>假数据的生成分为两个阶段：</p>
+                            <ol><li>对要生成假数据的模型指定字段进行赋值 - <a href="http://d.laravel-china.org/docs/5.5/testing#model-factories">『模型工厂』</a>；</li>
+                                <li>批量生成假数据模型 - <a href="http://d.laravel-china.org/docs/5.5/seeding">『数据填充』</a>；</li>
+                            </ol>
+
+                            <h3>模型工厂</h3>
+                            <p>Laravel 默认为我们集成了 <a href="https://github.com/fzaninotto/Faker">Faker</a> 扩展包，使用该扩展包可以让我们很方便的生成一些假数据。</p>
+                            <p>示例如下：</p>
+                            <pre><code class="language-php">// 使用 factory 来创建一个 Faker\Generator 实例
+$faker = Faker\Factory::create();
+
+// 生成用户名
+$faker-&gt;name; // "Janie Roob"
+
+// 生成安全邮箱
+$faker-&gt;safeEmail; // "claire.wuckert@example.net"
+
+// 生成随机日期
+$faker-&gt;date // "2011-02-10"
+
+// 生成随机时间
+$faker-&gt;time // "13:03:55"</code></pre>
+                            <p>我们可以借助 Faker 和 Eloquent 模型工厂来为指定模型的每个字段设置随机值。</p>
+                            <p>本项目中生成的模型工厂如下：</p>
+                            <p><em>database/factories/UserFactory.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Faker\Generator as Faker;
+
+/*
+|--------------------------------------------------------------------------
+| Model Factories
+|--------------------------------------------------------------------------
+|
+| This directory should contain each of the model factory definitions for
+| your application. Factories provide a convenient way to generate new
+| model instances for testing / seeding your application's database.
+|
+*/
+
+$factory-&gt;define(App\Models\User::class, function (Faker $faker) {
+    static $password;
+
+    return [
+        'name' =&gt; $faker-&gt;name,
+        'email' =&gt; $faker-&gt;unique()-&gt;safeEmail,
+        'password' =&gt; $password ?: $password = bcrypt('secret'),
+        'remember_token' =&gt; str_random(10),
+    ];
+});</code></pre>
+                            <p><code>define</code> 定义了一个指定数据模型（如此例子 <code>User</code>）的模型工厂。<code>define</code> 方法接收两个参数，第一个参数为指定的 Eloquent 模型类，第二个参数为一个闭包函数，该闭包函数接收一个 <code>Faker</code> PHP 函数库的实例，让我们可以在函数内部使用 Faker 方法来生成假数据并为模型的指定字段赋值。</p>
+                            <p>让我们对生成的模型工厂文件进行修改，修改后如下。</p>
+                            <p><em>database/factories/UserFactory.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Faker\Generator as Faker;
+
+/*
+|--------------------------------------------------------------------------
+| Model Factories
+|--------------------------------------------------------------------------
+|
+| This directory should contain each of the model factory definitions for
+| your application. Factories provide a convenient way to generate new
+| model instances for testing / seeding your application's database.
+|
+*/
+
+$factory-&gt;define(App\Models\User::class, function (Faker $faker) {
+    $date_time = $faker-&gt;date . ' ' . $faker-&gt;time;
+    static $password;
+
+    return [
+        'name' =&gt; $faker-&gt;name,
+        'email' =&gt; $faker-&gt;safeEmail,
+        'password' =&gt; $password ?: $password = bcrypt('secret'),
+        'remember_token' =&gt; str_random(10),
+        'created_at' =&gt; $date_time,
+        'updated_at' =&gt; $date_time,
+    ];
+});</code></pre>
+                            <p>我们使用生成的假日期对用户的创建时间和更新时间进行赋值。</p>
+                            <h2>数据填充</h2>
+                            <p>在 Laravel 中我们使用 <code>Seeder</code> 类来给数据库填充测试数据。所有的 Seeder 类文件都放在 <code>database/seeds</code> 目录下，文件名需要按照『驼峰式』来命名，且严格遵守大小写规范。Laravel 默认为我们定义了一个 <code>DatabaseSeeder</code> 类，我们可以在该类中使用 <code>call</code> 方法来运行其它的 <code>Seeder</code> 类，以此控制数据填充的顺序。我们可以使用下面命令来生成一个 <code>UsersTableSeeder</code> 文件，用于填充用户相关的假数据。</p>
+                            <pre><code class="language-bash">$ php artisan make:seeder UsersTableSeeder</code></pre>
+                            <p>在我们定义好了用户模型工厂之后，便可以在生成的用户数据填充文件中使用 <code>factory</code> 这个辅助函数来生成一个使用假数据的用户对象。</p>
+                            <p>现在让我们使用该方法来创建 50 个假用户。</p>
+                            <p><em>database/seeds/UsersTableSeeder.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Seeder;
+use App\Models\User;
+
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $users = factory(User::class)-&gt;times(50)-&gt;make();
+        User::insert($users-&gt;makeVisible(['password', 'remember_token'])-&gt;toArray());
+
+        $user = User::find(1);
+        $user-&gt;name = 'Aufree';
+        $user-&gt;email = 'aufree@yousails.com';
+        $user-&gt;password = bcrypt('password');
+        $user-&gt;save();
+    }
+}</code></pre>
+                            <p><code>times</code> 和 <code>make</code> 方法是由 <a href="https://doc.laravel-china.org/api/5.1/Illuminate/Database/Eloquent/FactoryBuilder.html">FactoryBuilder 类</a> 提供的 API。<code>times</code> 接受一个参数用于指定要创建的模型数量，<code>make</code> 方法调用后将为模型创建一个 <a href="http://d.laravel-china.org/docs/5.5/collections">集合</a>。<code>makeVisible</code> 方法临时显示 User 模型里指定的隐藏属性 <code>$hidden</code>，接着我们使用了 <code>insert</code> 方法来将生成假用户列表数据批量插入到数据库中。最后我们还对第一位用户的信息进行了更新，方便后面我们使用此账号登录。</p>
+                            <p>接着我们还需要在 <code>DatabaseSeeder</code> 中调用 <code>call</code> 方法来指定我们要运行假数据填充的文件。</p>
+                            <p><em>database/seeds/DatabaseSeeder.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Model::unguard();
+
+        $this-&gt;call(UsersTableSeeder::class);
+
+        Model::reguard();
+    }
+}</code></pre>
+                            <p>完成上面操作之后，我们便可以开始为用户生成批量假数据了，在运行生成假数据的命令之前，我们需要使用 <code>migrate:refresh</code> 命令来重置数据库，之后再使用 <code>db:seed</code> 执行数据填充。</p>
+                            <pre><code class="language-bash">$ php artisan migrate:refresh
+$ php artisan db:seed</code></pre>
+                            <p>如果我们要单独指定执行 <code>UserTableSeeder</code> 数据库填充文件，则可以这么做：</p>
+                            <pre><code class="language-bash">$ php artisan migrate:refresh
+$ php artisan db:seed --class=UsersTableSeeder</code></pre>
+                            <p>你也可以使用下面一条命令来同时完成数据库的重置和填充操作：</p>
+                            <pre><code class="language-bash">$ php artisan migrate:refresh --seed</code></pre>
+                            <p><img src="../images/mv3mkD8y9d.png" alt="file" /></p>
+                            <h2>分页</h2>
+                            <p>现在我们已拥有足够多的用户了，接下来让我们着手开发用户列表页面的分页功能。在 Laravel 应用中，分页功能的开发非常简单，接下来让我们看下具体如何实现。</p>
+                            <p>首先，我们需要先对用户控制器中获取所有用户数据的方法进行更改，修改如下。</p>
+                            <p><em>app/Http/Controllers/UsersController.php</em></p>
+                            <pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+.
+.
+.
+class UsersController extends Controller
+{
+    .
+    .
+    .
+    public function index()
+    {
+        $users = User::paginate(10);
+        return view('users.index', compact('users'));
+    }
+.
+.
+.    </code></pre>
+                            <p>默认状况下，页面的当前页数由 HTTP 请求所带的 <code>page</code> 参数决定，当你访问 <a href="http://sample.app/users?page=2">http://sample.app/users?page=2</a> 链接时，获取的是第二页的用户列表信息，Laravel 会自动检测到 <code>page</code> 的值并插入由分页器生成的链接中。在上面代码我们使用 <code>paginate</code> 方法来指定每页生成的数据数量为 10 条，即当我们有 50 个用户时，用户列表将被分为五页进行展示。</p>
+                            <p>在调用 <code>paginate</code> 方法获取用户列表之后，便可以通过以下代码在用户列表页上渲染分页链接。</p>
+                            <pre><code class="language-php">{!! $users-&gt;render() !!}</code></pre>
+                            <p>由 <code>render</code> 方法生成的 HTML 代码默认会使用 Bootstrap 框架的样式，渲染出来的视图链接也都统一会带上 <code>?page</code> 参数来设置指定页数的链接。另外还需要注意的一点是，渲染分页视图的代码必须使用 <code>{!! !!}</code> 语法，而不是 <code>{{　}}</code>，这样生成 HTML 链接才不会被转义。</p>
+                            <p>让我们对用户列表页视图进行修改，加上渲染分页视图的代码。</p>
+                            <p><em>resources/views/users/index.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', '所有用户')
+
+@section('content')
+&lt;div class="col-md-offset-2 col-md-8"&gt;
+  &lt;h1&gt;所有用户&lt;/h1&gt;
+  &lt;ul class="users"&gt;
+    @foreach ($users as $user)
+      &lt;li&gt;
+        &lt;img src="{{ $user-&gt;gravatar() }}" alt="{{ $user-&gt;name }}" class="gravatar"/&gt;
+        &lt;a href="{{ route('users.show', $user-&gt;id )}}" class="username"&gt;{{ $user-&gt;name }}&lt;/a&gt;
+      &lt;/li&gt;
+    @endforeach
+  &lt;/ul&gt;
+
+  {!! $users-&gt;render() !!}
+&lt;/div&gt;
+@stop</code></pre>
+                            <p><img src="../images/Dv6v0FsRR0.png" alt="file" /></p>
+                            <h2>使用局部视图重构</h2>
+                            <p>为了对视图模块进行细分，使目录结构更好理解，接下来让我们对用户列表页进行重构，将单个用户视图抽离成一个完整的局部视图。首先我们引入用户局部视图到用户列表上。</p>
+                            <p><em>resources/views/users/index.blade.php</em></p>
+                            <pre><code class="language-html">@extends('layouts.default')
+@section('title', '所有用户')
+
+@section('content')
+&lt;div class="col-md-offset-2 col-md-8"&gt;
+  &lt;h1&gt;所有用户&lt;/h1&gt;
+  &lt;ul class="users"&gt;
+    @foreach ($users as $user)
+      @include('users._user')
+    @endforeach
+  &lt;/ul&gt;
+
+  {!! $users-&gt;render() !!}
+&lt;/div&gt;
+@stop</code></pre>
+                            <p>接着再对用户局部视图进行创建。</p>
+                            <p><em>resources/views/users/_user.blade.php</em></p>
+                            <pre><code class="language-html">&lt;li&gt;
+  &lt;img src="{{ $user-&gt;gravatar() }}" alt="{{ $user-&gt;name }}" class="gravatar"/&gt;
+  &lt;a href="{{ route('users.show', $user-&gt;id )}}" class="username"&gt;{{ $user-&gt;name }}&lt;/a&gt;
+&lt;/li&gt;</code></pre>
+                            <p>修改完成后刷新页面测试：</p>
+                            <p><img src="../images/96TAFBiSyT.png" alt="file" /></p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <a class="ui basic button small  pull-left popover " data-content="8.3. 权限系统" href="8.3permissions-system.html"><i class="icon arrow left"></i> 上一篇</a>
+                    <a class="ui basic button small  pull-right popover " data-content="8.5. 删除用户" href="8.5delete-user.html">下一篇 <i class="icon arrow right"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="item header">
+
+                    <div class="ui segment orange text-center" style="padding: 25px;">
+                        刻意练习，每日精进。
+                    </div>
+
+
+                    <div class="ui segment">
+
+                        <div class="ui three statistics">
+                            <div class="ui huge statistic">
+                                <div class="value">22</div>
+                                <div class="label">点赞</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">9179</div>
+                                <div class="label">浏览</div>
+                            </div>
+                            <div class="ui huge statistic">
+                                <div class="value">1</div>
+                                <div class="label">评论</div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="ui stackable cards">
+                    <div class="ui  card column author-box grid" style="margin-top: 20px;">
+
+                        <div class="ui fluid" style="margin-top: 20px;">
+                            <div class="ui teal ribbon label"><i class="star icon"></i> 作者</div>
+                        </div>
+
+                        <a class="avatar-link">
+                            <img class="ui centered circular tiny image "
+                                 src="../images/1_1479342408.png">
+                            </img>
+                        </a>
+
+                        <div class="extra content ui center aligned container">
+                            <a class="header">Summer</a>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui sticky" style="padding-top:20px">
+                    <div class="ui  card column author-box grid " id="toc">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="circular ui icon button fixed feedback popover" data-content="建议与反馈 @Summer" data-position="left center">
+        <i class="icon talk outline"></i>
+    </a>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">友站</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://laravel-china.org/" class="item" target="_blank">Laravel China 社区</a>
+                        <a href="https://easywechat.org/" class="item" target="_blank">EasyWechat</a>
+                        <a href="https://yousails.com/" class="item" target="_blank">优帆远扬</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">资源推荐</h4>
+                    <div class="ui inverted link list">
+                        <a href="https://d.laravel-china.org/" class="item" target="_blank">Laravel 中文文档</a>
+                        <a href="https://cs.laravel-china.org/" class="item" target="_blank">Laravel 速查表</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted  header">Laravel 实战教程</h4>
+                    <p>
+                        编程是技能，不是知识，技能的唯一学习路径就是重复、实战性练习。
+                    </p>
+
+                    <p>
+                        <a class="ui teal button" href="https://laravel-china.org/contact"><i class="icon idea "></i>
+                            联系我
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ui inverted section divider"></div>
+            <div>
+
+                <p style="font-size:0.9em; margin-top:20px;margin-bottom: -8px;color: rgb(137, 137, 140);"
+                   class="ui inverted ">
+                    由 <a href="http://weibo.com/u/1837553744?is_hot=1" target="_blank"
+                         style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+
+</body>
+</html>
